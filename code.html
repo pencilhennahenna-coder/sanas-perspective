@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sana's Perspective|Sana's Code Library Base</title>
+        <!-- SEO Meta Tags for Sana's Code Library -->
+    <meta name="description" content="Sana's Code Library Base - Learn step-by-step HTML, CSS, and JavaScript web development, code snippets, and practical frontend design.">
+    <meta name="keywords" content="Sana's Code Library, HTML tutorials, CSS styling, JavaScript logic, web development for beginners, Sana's Perspective, digital library coding">
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .step-title {
+            color: #007acc;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* Base Code Box Styling */
+        .code-container {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            margin: 10px 0 20px 0;
+            font-family: monospace;
+        }
+        .code-container button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .code-container button:hover {
+            background-color: #005999;
+        }
+        pre {
+            overflow-x: auto;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Website Building Code Guide</h2>
+    <p>Yahan website ke har hisse ka alag code aur copy button milega.</p>
+
+    <!-- ===== YAHAN SE AAP NAYA SECTION SHURU KARENGI ===== -->
+    <h3 class="step-title">Step 1: Background Code</h3>
+    <div class="code-container">
+        <button onclick="copyCode(this)">Copy Code</button>
+        <pre><code>
+/* Aapka code yahan aayega */
+body {
+    background-color: #aff4c1;
+}
+        </code></pre>
+    </div>
+    
+    
+    
+    <h3>Step 2: Header Styling</h3>
+<div class="code-container">
+    <button onclick="copyCode(this)">Copy Code</button>
+    <pre><code>
+/* Aapka naya code yahan aayega */
+.header {
+    background-color: #000;
+}
+    </code></pre>
+</div>
+
+    <!-- ================================================= -->
+
+    <!-- Global Copy Script (Ise change karne ki zaroorat nahi hai) -->
+    
+    <a href="index.html"class="back-btn"style="text-decoration:none;">↗️go back </a>
+    <script>
+        function copyCode(button) {
+            const codeText = button.nextElementSibling.innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                button.innerText = "Copied!";
+                setTimeout(() => {
+                    button.innerText = "Copy Code";
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>

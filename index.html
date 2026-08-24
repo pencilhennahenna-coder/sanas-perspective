@@ -1,40 +1,96 @@
-
-
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta name="google-site-verification" content="zFnq8cLLNpEBhuHt25BPfxLHZb8_2Re8iQHThepnag4" /> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Sana's Perspective</title>
+    <title>Sana's Perspective</title>
     
-    <meta name="keywords" content="अपनापन है तुमसे, सना के परिप्रेक्ष्य, Sana Rahman, Mehndi Designs by Sana, Hindi Moral Stories, Islamic Knowledge Hindi, Deen ki Baatein, Science Facts in Hindi, Indian History Facts, Basic Law and Kanoon Hindi, Sana's Digital Library, Mehndi Shorts">
-    <meta name="description" content="Sana's Perspective: Deen, Science, aur Mehndi designs ki digital library. Ek aisi jagah jahan mehnat aur hunar se seekhne ko milta hai.">
+    <meta name="keywords" content="Sana's Perspective, Sana Rahman, HTML CSS JavaScript Coding, Web Development in Hindi, Programming Tutorials, Hindi Moral Stories, Islamic Knowledge Hindi, Deen ki Baatein, Science Facts in Hindi, Indian History Facts, Basic Law and Kanoon Hindi, Sana's Digital Library, Bachon ki Kahaniyaan, Horror Stories Hindi">
+    <meta name="description" content="Sana's Perspective: Deen, Science, Itihaas, Coding aur Kahaniyon ki digital library. Ek aisi jagah jahan mehnat aur hunar se seekhne ko milta hai.">
     <meta name="author" content="Sana Rahman">
 
     <style>
-        body { background-color: #aafff4c1; color: #3331f1; font-family: sans-serif; text-align: center; padding: 15px; }
-        .main-table { width: 100%; max-width: 400px; margin: 0 auto; border-collapse: collapse; }
-        .nav-btn { display: block; text-decoration: none; color: white; padding: 12px; border-radius: 12px; font-weight: bold; margin: 5px; }
-        h1 { color: #d81b60; text-transform: uppercase; margin: 10px 0; }
+        body { 
+            background-color: #aafff4c1; 
+            color: #3331f1; 
+            font-family: sans-serif; 
+            text-align: center; 
+            padding: 15px; 
+        }
+        .main-table { 
+            width: 100%; 
+            max-width: 400px; 
+            margin: 0 auto; 
+            border-collapse: collapse; 
+        }
+        h1 { 
+            color: #d81b60; 
+            text-transform: uppercase; 
+            margin: 10px 0; 
+        }
+        .sub-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+        }
+        .sub-table td { 
+            padding: 5px; 
+        }
+
+        /* --- MASTER BUTTON STYLE (Ek hi jagah sari styling) --- */
+        .base-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            height: 48px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow:2px 2px 2px blue,3px 3px 3px black,4px 4px 4px red, inset 0px 4px  7px black;
+        }
+
+        /* --- INDIVIDUAL COLOR VARIATIONS --- */
+        .btn-dark { background: #2c3e50; }
+        .btn-green { background: #009432; }
+        .btn-code { background: #3c2bffb0; box-shadow: 2px 2px 2px red, 3px 3px 3px black; }
+        .btn-library { background: linear-gradient(-45deg, #d81b60, #6a1b9a); width: 100%; margin-bottom: 8px; }
+        .btn-islam { background: #28a745; }
+        .btn-science { background: #007bff; }
+        .btn-history { background: #ffc107; color: black; }
+        .btn-kanoon { background: #dc3545; }
+        
+        /* Side-by-side flex container for horizontal buttons */
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
 
     <table class="main-table">
-        <!-- Section 1: Design Lab & Clients -->
+        <!-- Section 1: Design Lab & Shortcuts -->
         <tr>
             <td>
                 <h1>Sana's Design Lab 🚀</h1>
-                <a href="lab.html" class="nav-btn" style="background: #2c3e50;">✨ Mere Sabhi Buttons</a>
                 
-                
-                <a href="demo.html" class="nav-btn" style="background: #009432;">🏢 Client & Commercial</a>
-                
-                <a href="code.html" class="nav-btn" style="background: #3c2bffb0; box-shadow: 2px 2px 2px red,3px 3px 3px black">copy paste code</a>
-                
-                
+                <table class="sub-table">
+                    <tr>
+                        <td><a href="lab.html" class="base-btn btn-dark">✨ Mere Sabhi Buttons</a></td>
+                    </tr>
+                </table>
+
+                <table class="sub-table">
+                    <tr>
+                        <td><a href="demo.html" class="base-btn btn-green">🏢 Commercial</a></td>
+                        <td><a href="code.html" class="base-btn btn-code">Copy Code</a></td>
+                    </tr>
+                </table>
             </td>
         </tr>
 
@@ -45,23 +101,28 @@
         <tr>
             <td>
                 <h1 style="font-size: 24px;">Sana's Perspective</h1>
-                <p style="font-style: italic; color: #ff7300;">Deen, Science, Itihaas aur Hunar</p>
+                <p style="font-style: italic; color: #ff7300;">Deen, Science, Itihaas aur Gyan</p>
                 
-                <a href="stories.html" style="text-decoration: none;">
-                    <div style="background: linear-gradient(-45deg, #d81b60, #6a1b9a); color: white; padding: 10px  10px; border-radius: 12px; font-weight: bold; margin: 10px;">
-                        📖 Sana's Digital Library
-                    </div>
+                <!-- Digital Library Full Width Button -->
+                <a href="stories.html" class="base-btn btn-library" style="width: 100%;">
+                    📖 Sana's Digital Library
                 </a>
 
-                <!-- Table for Categories -->
-                <table style="width: 100%;">
+                <!-- Side-by-Side Moral Stories Buttons (Jaise tumne abhi pucha tha) -->
+                <div class="btn-row">
+                    <a href="stories.html" class="base-btn" style="background: linear-gradient(-45deg, #d81b60, #6a1b9a);">📖 Moral Story</a>
+                    <a href="#" class="base-btn" style="background: linear-gradient(-45deg, #ffffff, #888888); color: black;">📖 Horror 👻</a>
+                </div>
+
+                <!-- Table for Main Categories / Buttons -->
+                <table class="sub-table" style="margin-top: 5px;">
                     <tr>
-                        <td><a href="deen.html" class="nav-btn" style="background: #28a745;">📖 Islam ka itihaas</a></td>
-                        <td><a href="science.html" class="nav-btn" style="background: #007bff;">🔬 Science</a></td>
+                        <td><a href="deen.html" class="base-btn btn-islam">📖 Islam ka Itihaas</a></td>
+                        <td><a href="science.html" class="base-btn btn-science">🔬 Science</a></td>
                     </tr>
                     <tr>
-                        <td><a href="hindustan.html" class="nav-btn" style="background: #ffc107; color: black;">padhe Sindhu sabhyata se</a></td>
-                        <td><a href="kanoon.html" class="nav-btn" style="background: #dc3545;">⚖️ Kanoon</a></td>
+                        <td><a href="hindustan.html" class="base-btn btn-history">📜 Sindhu Sabhyata</a></td>
+                        <td><a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a></td>
                     </tr>
                 </table>
             </td>

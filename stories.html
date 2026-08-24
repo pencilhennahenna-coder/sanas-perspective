@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: center; gap: 10px; padding: 10px;">
+<div style="display: flex; justify-content: center; gap: 10px; padding: 10px; flex-wrap: wrap;">
     <div onclick="openStory('ali')" style="cursor: pointer; border: 1.5px solid #d81b60; border-radius: 20px; padding: 5px 15px; background: white; display: flex; align-items: center; gap: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
         <span style="font-size: 14px;">📖</span>
         <span style="font-weight: bold; font-size: 12px; color: #d81b60;">Nek Dil Ali</span>
@@ -8,11 +8,19 @@
         <span style="font-size: 14px;">🪔</span>
         <span style="font-weight: bold; font-size: 12px; color: #d81b60;">Khushiyon Chiragh</span>
     </div>
+
+    <div onclick="openStory('eid')" style="cursor: pointer; border: 1.5px solid #d81b60; border-radius: 20px; padding: 5px 15px; background: white; display: flex; align-items: center; gap: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <span style="font-size: 14px;">🌙</span>
+        <span style="font-weight: bold; font-size: 12px; color: #d81b60;">Eid ki Meethi Khushiyan</span>
+    </div>
 </div>
 
-<div id="story-display" style="margin: 10px 15px; padding: 15px; border-radius: 12px; background: #fffafb; border: 1px solid #eee; min-height: 50px; font-size: 14px; line-height: 1.6; text-align: left;">
+<div id="story-display" style="margin: 10px 15px; padding: 20px 20px; border-radius: 12px; background: #ffd295; border: 1px solid #eee;  font-size: 14px;  line-height: 1.6;text-align: left;">
+    
     <p style="color: #999; text-align: center; font-size: 12px;">Kahani chunne ke liye click karein...</p>
 </div>
+
+<a href="index.html" style="text-decoration: none; color: #000; background-color: transparent; padding: 5px 0px; border-radius: 20px; font-weight: bold; display: inline-block; box-shadow: 0 3px 6px rgba(0,0,0,0.3);">🏠 Home Page Par Wapas Jayen</a>
 
 <script>
     function openStory(storyName) {
@@ -35,6 +43,15 @@
                 <p>Idris ne dekha ki gaon ke log andhere se pareshan hain. Usne himmat nahi haari aur apni thodi si jamapoonji se mitti ka chiragh aur tel khareeda. Woh roz shaam ko gaon ki galiyon mein nikal jata aur jahan andhera hota, wahan ek chiragh jala deta.</p>
                 <p>Dheere dheere gaon ke log Idris ki is nek niyati se prabhavit hue. Unhone bhi Idris ka saath dena shuru kiya. Idris ne sikhaya ki agar hum sab mil kar thodi si mehnat karein, toh andhera hamesha ke liye khatam ho sakta hai.</p>
                 <p>Aaj Idris ka gaon roshni se jagmaga raha hai, aur log use 'Khushiyon ka Chiragh' dene wala farishta maante hain.</p>
+                <button onclick="closeStory()" style="background: #999; color: white; border: none; padding: 5px 15px; border-radius: 15px; font-size: 11px; margin-top: 10px; cursor: pointer;">Band Karein</button>
+            `;
+        } else if(storyName === 'eid') {
+            displayDiv.innerHTML = `
+                <h3 style="color: #d81b60; margin: 0 0 10px 0;">Eid ki Meethi Khushiyan</h3>
+                <p>Eid ka chaand nikalte hi poore mohalle mein khushiyon ki lahar daud gayi. Har taraf bachhe naye kapde pehan kar ek dusre ko gale laga rahe the.</p>
+                <p>Isi mohalle mein Zaid naam ka ek chhota bachha rehta tha, jiske naye kapde nahi ban paaye the kyunki uske abba ki tabiyat kharab thi. Zaid udaas hokar ghar ke kone mein baith gaya.</p>
+                <p>Zaid ka dost Kabir jab uske ghar aaya aur usne Zaid ki udaasi dekhi, toh usne turant apne ghar jaakar apni pichli Eid ki ek nayi kurta-pyjama jodi aur meethi sevaiyon ka dibba laakar Zaid ko de diya.</p>
+                <p>Kabir ne kaha, "Dost, Eid sirf apne naye kapde pehanne ka naam nahi, balki apno ke chehre par muskaan laane ka naam hai." Zaid ki aankh mein khushiyon ke aansu aa gaye aur usne Kabir ko gale se laga liya.</p>
                 <button onclick="closeStory()" style="background: #999; color: white; border: none; padding: 5px 15px; border-radius: 15px; font-size: 11px; margin-top: 10px; cursor: pointer;">Band Karein</button>
             `;
         }
