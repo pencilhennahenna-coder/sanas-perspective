@@ -6,12 +6,12 @@
     <title>Sana's Perspective - Horror Stories</title>
     
     <meta name="keywords" content="Horror Stories in Hindi, Darr wali kahaniyan, Bhoot ki kahani, Scary Stories Hindi, Sana's Perspective Horror">
-    <meta name="description" content="Sana's Perspective ki Horror Story collection. Padhiye dil ko dahla dene wali aur romanchak darawani kahaniyan.">
+    <meta name="description" content="Sana's Perspective ki Horror Story collection. Padhiye aur suniye dil ko dahla dene wali aur romanchak darawani kahaniyan.">
     <meta name="author" content="Sana Rahman">
 
     <style>
         body { 
-            background-color: #121212; /* Dark theme for horror vibe */
+            background-color: #121212; 
             color: #e0e0e0; 
             font-family: sans-serif; 
             text-align: center; 
@@ -25,13 +25,30 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
+            box-sizing: border-box;
         }
         h1 { 
             color: #ff3333; 
             text-transform: uppercase; 
             margin-bottom: 5px; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 24px;
         }
+        
+        /* Image / Book Cover Style */
+        .cover-img-box {
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            border: 1px solid #333;
+        }
+        .cover-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .story-box {
             text-align: left;
             background: #2a2a2a;
@@ -42,6 +59,35 @@
             font-size: 15px;
             border-left: 4px solid #ff3333;
         }
+        
+        /* Buttons Style */
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s opacity;
+        }
+        .listen-btn {
+            background-color: #ff9900;
+            color: #000;
+        }
+        .copy-btn {
+            background-color: #27ae60;
+            color: #fff;
+        }
+        .btn:hover {
+            opacity: 0.85;
+        }
+
         .back-btn {
             display: inline-block;
             text-decoration: none;
@@ -58,18 +104,62 @@
 
     <div class="main-container">
         <h1>👻 Rooh ka Kamra</h1>
-        <p style="font-style: italic; color: #aaa;">Sana's Perspective - Darawani Kahaniyan</p>
+        <p style="font-style: italic; color: #aaa; margin-top: 0;">Sana's Perspective - Darawani Kahaniyan</p>
         
+        <!-- Story Book Banner/Cover Image -->
+        <div class="cover-img-box">
+            <img src="30c6e671af702bbe82299bbe30453a5563e225f8860dfb875ce2ae42cbb3e6f1.0.jpeg" alt="Purane Hostel ki Woh Raat Cover">
+        </div>
+
         <div class="story-box">
             <h3 style="color: #ff6666; margin-top: 0;">Kahani: Purane Hostel ki Woh Raat</h3>
-            <p>Raat ke theek 2 baj rahe the. Hostel ka pura corridor sunsan tha, bas meri ghadi ki 'tic-tic' ki aawaz goonj rahi thi. Humne naye-naye is purane college mein admission liya tha, aur mujhe akele room mein rehna pada tha.</p>
-            <p>Achanak, room ke darwaze par kisi ne dheere se <strong>teen baar knock kiya</strong>. Maine socha shayad koi dost hoga. Jaise hi maine darwaza khola, bahar koi nahi tha... lekin zameen par ek purani, dhool se bhari diary padi thi.</p>
-            <p>Jaise hi maine us diary ko uthane ke liye haath badhaya, room ki saari lights apne aap bujh gayi, aur paas wale band kamre se aisi aawaz aane lagi jaise koi zameen par zorse chain ghaseet raha ho...</p>
-            <p><em>(Aage kya hua? Jald hi agla part aayega!)</em></p>
+            <p style="font-size: 13px; color: #ff9999; margin-bottom: 10px;">By Sana Rahman</p>
+            
+            <!-- Story Content -->
+            <div id="storyContent">
+                <p>Raat ke theek 2 baj rahe the. Hostel ka pura corridor sunsan tha, bas meri ghadi ki 'tic-tic' ki aawaz goonj rahi thi. Humne naye-naye is purane college mein admission liya tha, aur mujhe akele room mein rehna pada tha.</p>
+                <p>Achanak, room ke darwaze par kisi ne dheere se <strong>teen baar knock kiya</strong>. Maine socha shayad koi dost hoga. Jaise hi maine darwaza khola, bahar koi nahi tha... lekin zameen par ek purani, dhool se bhari diary padi thi.</p>
+                <p>Jaise hi maine us diary ko uthane ke liye haath badhaya, room ki saari lights apne aap bujh gayi, aur paas wale band kamre se aisi aawaz aane lagi jaise koi zameen par zorse chain ghaseet raha ho...</p>
+                <p><em>(Aage kya hua? Jald hi agla part aayega!)</em></p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button onclick="listenStory()" class="btn listen-btn">🔊 Listen Story</button>
+                <button onclick="copyStoryText()" class="btn copy-btn">📋 Copy Story</button>
+            </div>
         </div>
 
         <a href="index.html" class="back-btn">🏠 Home Page Par Jaayein</a>
     </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. Listen Story Function (Hindi Speech)
+        function listenStory() {
+            const storyText = document.getElementById("storyContent").innerText;
+            
+            window.speechSynthesis.cancel(); // Stop any ongoing speech
+
+            const speech = new SpeechSynthesisUtterance(storyText);
+            speech.lang = "hi-IN";
+            speech.rate = 0.85; // Medium slow speed for thriller vibe
+            speech.pitch = 0.95;
+
+            window.speechSynthesis.speak(speech);
+        }
+
+        // 2. Copy Story Function
+        function copyStoryText() {
+            const storyText = document.getElementById("storyContent").innerText;
+            
+            navigator.clipboard.writeText(storyText).then(() => {
+                alert("कहानी सफलतापूर्वक कॉपी हो गई है!");
+            }).catch(err => {
+                alert("कॉपी करने में समस्या आई, कृपया दोबारा प्रयास करें।");
+            });
+        }
+    </script>
 
 </body>
 </html>
