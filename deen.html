@@ -1,33 +1,194 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Sahaba-e-Kiraam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सहाबा-ए-किराम का जीवन परिचय</title>
+  <!-- SEO Meta Tags for Sahaba-e-Kiram Page -->
+<meta name="description" content="सहाबा-ए-किराम (रज़ि.) की जीवनी और इतिहास। हज़रत अबू बक्र सिद्दीक़, हज़रत उमर फ़ारूक़ और अन्य सहाबियों के जीवन परिचय और ख़िलाफ़त की पूरी जानकारी।">
+<meta name="keywords" content="Sahaba Life Story, Hazrat Abu Bakr Biography in Hindi, Hazrat Umar Farooq, Islamic History, Sahaba-e-Kiram, Islamic Knowledge, Seerat-e-Sahaba">
+<meta name="author" content="Sana">
+  
+    <style>
+        html {
+            scroll-behavior: smooth; /* Smooth scroll ke liye */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* 1. Upar ki Sahaba Index List */
+        .index-box {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-top: 4px solid #1b5e20;
+        }
+
+        .index-title {
+            color: #1b5e20;
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .index-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .index-list a {
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+            padding: 8px 12px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .index-list a:hover {
+            background-color: #2e7d32;
+            color: #ffffff;
+        }
+
+        /* 2. Expandable Cards */
+        .profile-card {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-left: 5px solid #1b5e20;
+        }
+
+        .preview-content {
+            padding: 15px 20px 5px 20px;
+        }
+
+        .profile-title {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        details {
+            padding: 0 20px 15px 20px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #2e7d32;
+            padding: 10px 0;
+            outline: none;
+        }
+
+        .full-content {
+            margin-top: 10px;
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .top-link {
+            display: block;
+            text-align: right;
+            margin-top: 15px;
+            font-size: 0.85em;
+        }
+
+        .top-link a {
+            color: #1b5e20;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body style="background-color: #121212; color: white; font-family: 'serif'; text-align: center; padding: 20px;">
+<body id="home">
 
-    <h1 style="color: #28a745; border-bottom: 2px solid #28a745; padding-bottom: 10px;">✨ Sahaba-e-Kiraam Ki Zindagi ✨</h1>
-
-    <div style="background: #1e1e1e; padding: 20px; border-radius: 15px; text-align: left; margin: 20px auto; max-width: 600px; border-left: 5px solid #28a745;">
-        <h2 style="color: #ffc107;">Hazrat Abu Bakr Siddiq (R.A.)</h2>
-        <p style="line-height: 1.6; font-size: 18px;">
-            Aap Allah ke Rasool (S.A.W.) ke sabse qareebi dost aur Islam ke pehle Khalifa hain. 
-            Aapne apni poori daulat aur zindagi Allah ki raah mein qurban kar di. 
-            Aapki "Siddiqiat" (sachai) poori duniya ke liye ek roshan sitara hai.
-        </p>
+    <!-- UPAR KI MAIN LIST (INDEX) -->
+    <div class="index-box">
+        <h2 class="index-title">📌 सहाबा-ए-किराम की सूची (जिसपर पढ़ना हो क्लिक करें):</h2>
+        <ul class="index-list">
+            <li><a href="#abu-bakr">1. हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</a></li>
+            <li><a href="#umar">2. हज़रत उमर फ़ारूक़ (रज़ि.)</a></li>
+            <!-- Naye Sahaba ke naam yahan jodte jayen -->
+        </ul>
     </div>
 
-    <p style="margin-top: 30px;">
-        <a href="index.html" style="color: #00d4ff; text-decoration: none; font-weight: bold;">🏠 Home Page par Wapas Jayein</a>
-    </p>
+    <!-- CARD 1: HAZRAT ABU BAKR (R.A.) -->
+    <div class="profile-card" id="abu-bakr">
+        <div class="preview-content">
+            <h2 class="profile-title">हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</h2>
+            <p>हज़रत अबू बक्र सिद्दीक़ (रज़िअल्लाहु अन्हु) इस्लाम के पहले ख़लीफ़ा और नबी करीम (सल्ल.) के सबसे क़रीबी साथी थे...</p>
+        </div>
+
+        <details>
+            <summary>📖 पूरी जानकारी पढ़ें (Expand)</summary>
+            
+            <div class="full-content">
+                <div class="section-title">1. पैदाइश और नाम</div>
+                <ul>
+                    <li><span class="highlight">पैदाइश:</span> 573 ईस्वी (मक्का)।</li>
+                    <li><span class="highlight">असली नाम:</span> अब्दुल्लाह बिन उस्मान।</li>
+                </ul>
+
+                <div class="section-title">2. ख़िलाफ़त का दौर</div>
+                <ul>
+                    <li><span class="highlight">समय:</span> 2 साल, 2 महीने और 14 दिन।</li>
+                </ul>
+
+                <div class="top-link"><a href="#home">↑ वापस सूची (Index) पर जाएँ</a></div>
+            </div>
+        </details>
+    </div>
+
+    <!-- CARD 2: HAZRAT UMAR (R.A.) -->
+    <div class="profile-card" id="umar">
+        <div class="preview-content">
+            <h2 class="profile-title">हज़रत उमर फ़ारूक़ (रज़ि.)</h2>
+            <p>हज़रत उमर फारूक (रज़िअल्लाहु अन्हु) इस्लाम के दूसरे ख़लीफ़ा थे और अपने इंसाफ़ व अदल के लिए मशहूर हैं...</p>
+        </div>
+
+        <details>
+            <summary>📖 पूरी जानकारी पढ़ें (Expand)</summary>
+            
+            <div class="full-content">
+                <div class="section-title">1. पैदाइश और नाम</div>
+                <ul>
+                    <li><span class="highlight">पैदाइश:</span> लगभग 584 ईस्वी (मक्का)।</li>
+                    <li><span class="highlight">लक़ब:</span> अल-फ़ारूक़।</li>
+                </ul>
+
+                <div class="top-link"><a href="#home">↑ वापस सूची (Index) पर जाएँ</a></div>
+            </div>
+        </details>
+    </div>
 
 </body>
 </html>
-    <div style="background: #1e1e1e; padding: 20px; border-radius: 15px; text-align: left; margin: 20px auto; max-width: 600px; border-left: 5px solid #007bff;">
-        <h2 style="color: #ffc107;">Hazrat Ali Ibn Abi Talib (R.A.)</h2>
-        <p style="line-height: 1.6; font-size: 18px;">
-            Aap Allah ke Sher (Asadullah) hain aur ilm ka darwaza hain. 
-            Bachon mein sabse pehle Islam lane wale aur Rasool-Allah (S.A.W.) ke chachazad bhai aur damad hain. 
-            Aapki bahaduri aur hikmat (wisdom) poori ummat ke liye misal hai.
-        </p>
-    </div>
