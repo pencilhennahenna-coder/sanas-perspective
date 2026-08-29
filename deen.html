@@ -3,192 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>सहाबा-ए-किराम का जीवन परिचय</title>
-  <!-- SEO Meta Tags for Sahaba-e-Kiram Page -->
-<meta name="description" content="सहाबा-ए-किराम (रज़ि.) की जीवनी और इतिहास। हज़रत अबू बक्र सिद्दीक़, हज़रत उमर फ़ारूक़ और अन्य सहाबियों के जीवन परिचय और ख़िलाफ़त की पूरी जानकारी।">
-<meta name="keywords" content="Sahaba Life Story, Hazrat Abu Bakr Biography in Hindi, Hazrat Umar Farooq, Islamic History, Sahaba-e-Kiram, Islamic Knowledge, Seerat-e-Sahaba">
-<meta name="author" content="Sana">
-  
-    <style>
-        html {
-            scroll-behavior: smooth; /* Smooth scroll ke liye */
-        }
+    <title>सहाबा-ए-किराम का जीवन परिचय | Sahaba History in Hindi</title>
 
+    <!-- 2. लेखक का नाम (Author Name) -->
+    <meta name="author" content="Sana">
+
+    <!-- 3. वेबसाइट का विवरण (Description - 150-160 शब्दों में Google के लिए) -->
+    <meta name="description" content="सहाबा-ए-किराम (रज़ि.) का संपूर्ण जीवन परिचय, इतिहास, ख़िलाफ़त का दौर, पैदाइश, वफ़ात और मुख्य कारनामों की जानकारी हिंदी में पढ़ें।">
+
+    <!-- 4. सर्च कीवर्ड्स (Keywords - लोग Google पर क्या सर्च करते हैं) -->
+    <meta name="keywords" content="Sahaba, Sahaba-e-Kiram, Hazrat Abu Bakr Siddiq, Hazrat Umar Farooq, Islamic History in Hindi, Khilafat, Islamic Knowledge, Sahaba History Hindi, सहाबा का इतिहास, हज़रत अबू बक्र, हज़रत उमर">
+
+    <!-- 5. रोबोट्स गाइडेंस (Google को पेज इंडेक्स करने की अनुमति) -->
+    <meta name="robots" content="index, follow">
+    
+    <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
+            padding: 10px;
+            background-color: #ffc7003b;
         }
 
-        /* 1. Upar ki Sahaba Index List */
-        .index-box {
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-top: 4px solid #1b5e20;
-        }
-
-        .index-title {
-            color: #1b5e20;
-            margin-top: 0;
-            font-size: 1.2em;
-        }
-
-        .index-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .index-list a {
-            text-decoration: none;
-            color: #2e7d32;
-            font-weight: bold;
-            padding: 8px 12px;
-            background-color: #e8f5e9;
-            border-radius: 5px;
-            display: block;
-            transition: 0.2s;
-        }
-
-        .index-list a:hover {
-            background-color: #2e7d32;
-            color: #ffffff;
-        }
-
-        /* 2. Expandable Cards */
-        .profile-card {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border-left: 5px solid #1b5e20;
-        }
-
-        .preview-content {
-            padding: 15px 20px 5px 20px;
-        }
-
-        .profile-title {
-            color: #1b5e20;
-            margin-top: 0;
+        .sahaba-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            align-items: start;
         }
 
         details {
-            padding: 0 20px 15px 20px;
+            background-color: #ffffff;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 3px 2px 5px rgba(0,0,0,0.8), inset 3px 2px 17px rgba(0,0,255,0.8);
         }
 
         summary {
-            cursor: pointer;
             font-weight: bold;
-            color: #2e7d32;
-            padding: 10px 0;
+            color: #1b5e20;
+            cursor: pointer;
             outline: none;
         }
 
-        .full-content {
+        .content {
             margin-top: 10px;
-            border-top: 1px dashed #ccc;
             padding-top: 10px;
-            line-height: 1.6;
+            border-top: 1px dashed #bbb;
+            font-size: 0.9em;
         }
 
-        .section-title {
-            color: #2e7d32;
-            font-weight: bold;
-            margin-top: 15px;
+        /* 🔊 Bolne wale button ka style */
+        .audio-btn {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 8px;
+            font-size: 0.8em;
         }
 
-        ul {
-            padding-left: 20px;
-        }
-
-        .highlight {
-            font-weight: bold;
-        }
-
-        .top-link {
-            display: block;
-            text-align: right;
-            margin-top: 15px;
-            font-size: 0.85em;
-        }
-
-        .top-link a {
-            color: #1b5e20;
-            text-decoration: none;
-            font-weight: bold;
+        .audio-btn:hover {
+            background-color: #1b5e20;
         }
     </style>
 </head>
-<body id="home">
+<body>
 
-    <!-- UPAR KI MAIN LIST (INDEX) -->
-    <div class="index-box">
-        <h2 class="index-title">📌 सहाबा-ए-किराम की सूची (जिसपर पढ़ना हो क्लिक करें):</h2>
-        <ul class="index-list">
-            <li><a href="#abu-bakr">1. हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</a></li>
-            <li><a href="#umar">2. हज़रत उमर फ़ारूक़ (रज़ि.)</a></li>
-            <!-- Naye Sahaba ke naam yahan jodte jayen -->
-        </ul>
-    </div>
+    <h2>📌 सहाबा-ए-किराम का जीवन परिचय</h2>
 
-    <!-- CARD 1: HAZRAT ABU BAKR (R.A.) -->
-    <div class="profile-card" id="abu-bakr">
-        <div class="preview-content">
-            <h2 class="profile-title">हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</h2>
-            <p>हज़रत अबू बक्र सिद्दीक़ (रज़िअल्लाहु अन्हु) इस्लाम के पहले ख़लीफ़ा और नबी करीम (सल्ल.) के सबसे क़रीबी साथी थे...</p>
-        </div>
+    <div class="sahaba-grid">
 
         <details>
-            <summary>📖 पूरी जानकारी पढ़ें (Expand)</summary>
+    <summary>1. हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</summary>
+    <div class="content">
+        <button class="audio-btn" onclick="speakText(this)">🔊 सुनिए</button>
+
+        <div class="text-to-read">
+            <p><b>परिचय:</b> आप इस्लाम के प्रथम ख़लीफ़ा और पैगंबर हज़रत मोहम्मद (सल्ल.) के सबसे करीबी साथी और ससुर थे।</p>
             
-            <div class="full-content">
-                <div class="section-title">1. पैदाइश और नाम</div>
-                <ul>
-                    <li><span class="highlight">पैदाइश:</span> 573 ईस्वी (मक्का)।</li>
-                    <li><span class="highlight">असली नाम:</span> अब्दुल्लाह बिन उस्मान।</li>
-                </ul>
+            <p><b>1. नाम व पैदाइश:</b></p>
+            <ul>
+                <li><b>पूरा नाम:</b> अब्दुल्लाह बिन उस्मान (अबू बक्र)</li>
+                <li><b>पैदाइश:</b> 573 ईस्वी, मक्का (सऊदी अरब)</li>
+                <li><b>लक़ब (उपाधि):</b> अस-सिद्दीक़ (सच्चा) और अतीक़</li>
+            </ul>
 
-                <div class="section-title">2. ख़िलाफ़त का दौर</div>
-                <ul>
-                    <li><span class="highlight">समय:</span> 2 साल, 2 महीने और 14 दिन।</li>
-                </ul>
+            <p><b>2. परिवार व संतान:</b></p>
+            <ul>
+                <li><b>पिता का नाम:</b> उस्मान अबू क़हाफ़ा</li>
+                <li><b>माता का नाम:</b> सलमा उम्मुल ख़ैर</li>
+                <li><b>संतान:</b> हज़रत आयशा (रज़ि.), हज़रत अस्मा, अब्दुल्लाह, अब्दुर्रहमान, मोहम्मद, उम्मे कुलसूम</li>
+            </ul>
 
-                <div class="top-link"><a href="#home">↑ वापस सूची (Index) पर जाएँ</a></div>
-            </div>
-        </details>
-    </div>
+            <p><b>3. ख़िलाफ़त व मुख्य कारनामे:</b></p>
+            <ul>
+                <li><b>ख़िलाफ़त का समय:</b> 632 ईस्वी से 634 ईस्वी (लगभग 2 वर्ष 3 महीने)</li>
+                <li><b>अहम् कार्य:</b> पवित्र कुरआन मजीद की तमाम आयतों को एक जगह एकत्र कर किताबी रूप में सुरक्षित कराया, झूठे नबियों का ख़ात्मा किया और बाग़ियों को शांत किया।</li>
+            </ul>
 
-    <!-- CARD 2: HAZRAT UMAR (R.A.) -->
-    <div class="profile-card" id="umar">
-        <div class="preview-content">
-            <h2 class="profile-title">हज़रत उमर फ़ारूक़ (रज़ि.)</h2>
-            <p>हज़रत उमर फारूक (रज़िअल्लाहु अन्हु) इस्लाम के दूसरे ख़लीफ़ा थे और अपने इंसाफ़ व अदल के लिए मशहूर हैं...</p>
+            <p><b>4. वफ़ात:</b></p>
+            <ul>
+                <li><b>इंतक़ाल:</b> 23 जमादिल आख़िर 13 हिजरी (634 ईस्वी), मदीना मुनव्वरा</li>
+                <li><b>आयु:</b> 63 वर्ष</li>
+                <li><b>मज़ार:</b> मस्जिदे नबवी (मदीना) में हज़रत मोहम्मद (सल्ल.) के पहलू में</li>
+            </ul>
         </div>
-
-        <details>
-            <summary>📖 पूरी जानकारी पढ़ें (Expand)</summary>
-            
-            <div class="full-content">
-                <div class="section-title">1. पैदाइश और नाम</div>
-                <ul>
-                    <li><span class="highlight">पैदाइश:</span> लगभग 584 ईस्वी (मक्का)।</li>
-                    <li><span class="highlight">लक़ब:</span> अल-फ़ारूक़।</li>
-                </ul>
-
-                <div class="top-link"><a href="#home">↑ वापस सूची (Index) पर जाएँ</a></div>
-            </div>
-        </details>
     </div>
+</details>
+
+<details>
+    <summary>2. हज़रत उमर फ़ारूक़ (रज़ि.)</summary>
+    <div class="content">
+        <button class="audio-btn" onclick="speakText(this)">🔊 सुनिए</button>
+
+        <div class="text-to-read">
+            <p><b>परिचय:</b> आप इस्लाम के द्वितीय ख़लीफ़ा थे, जो अपने अद्वितीय न्याय, बहादुरी, और शासन व्यवस्था के लिए दुनिया भर में प्रसिद्ध हैं।</p>
+
+            <p><b>1. नाम व पैदाइश:</b></p>
+            <ul>
+                <li><b>पूरा नाम:</b> उमर इब्न अल-ख़त्ताब</li>
+                <li><b>पैदाइश:</b> 584 ईस्वी, मक्का (सऊदी अरब)</li>
+                <li><b>लक़ब (उपाधि):</b> अल-फ़ारूक़ (सत्य और असत्य में फ़र्क करने वाला) और अमीरुल मोमिनीन</li>
+            </ul>
+
+            <p><b>2. परिवार व संतान:</b></p>
+            <ul>
+                <li><b>पिता का नाम:</b> ख़त्ताब इब्न नुफैल</li>
+                <li><b>माता का नाम:</b> हंतमा बित हिशाम</li>
+                <li><b>मुख्य संतान:</b> हज़रत अब्दुल्लाह बिन उमर, हज़रत हफ़्सा (रज़ि.), उबैदुल्लाह, असिम, ज़ैनब, फ़ातिमा</li>
+            </ul>
+
+            <p><b>3. ख़िलाफ़त व मुख्य कारनामे:</b></p>
+            <ul>
+                <li><b>ख़िलाफ़त का समय:</b> 634 ईस्वी से 644 ईस्वी (लगभग 10 वर्ष. 6 महीने)</li>
+                <li><b>अहम् कार्य:</b> हिजरी कैलेंडर (Islamic Calendar) की शुरुआत की, डाक व्यवस्था (Post System), न्याय प्रणाली (Judicial Courts), जेल व्यवस्था, और पुलिस बल की स्थापना की। बैतुल माल (सार्वजनिक ख़ज़ाना) का गठन किया।</li>
+            </ul>
+
+            <p><b>4. शहादत:</b></p>
+            <ul>
+                <li><b>शहादत:</b> 26 ज़ुल हिज्जा 23 हिजरी (644 ईस्वी), फ़ज़र की नमाज़ के दौरान अबू लुलू फ़ीरोज़ ने हमला किया था।</li>
+                <li><b>आयु:</b> 60-63 वर्ष</li>
+                <li><b>मज़ार:</b> मस्जिदे नबवी (मदीना) में हज़रत अबू बक्र (रज़ि.) के पहलू में</li>
+            </ul>
+        </div>
+    </div>
+</details>
+
+    </div>
+
+    <script>
+        function speakText(button) {
+            // Button ke paas wale div (.text-to-read) ka text uthana
+            let contentDiv = button.nextElementSibling;
+            let text = contentDiv.innerText;
+
+            // Pehle se bol rahi aawaz ko rokna
+            window.speechSynthesis.cancel();
+
+            // Nayi speech tayyar karna
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'hi-IN'; // Hindi aawaz ke liye
+            speech.rate = 0.9;   // Bolne ki speed (thoda aaram se padhne ke liye)
+
+            // Browser se bolne ko kehna
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
 
 </body>
 </html>
