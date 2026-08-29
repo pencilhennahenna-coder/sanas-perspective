@@ -1,141 +1,64 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta name="google-site-verification" content="zFnq8cLLNpEBhuHt25BPfxLHZb8_2Re8iQHThepnag4" /> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sana's Perspective</title>
-    
-    <meta name="keywords" content="Sana's Perspective, Sana Rahman, HTML CSS JavaScript Coding, Web Development in Hindi, Programming Tutorials, Hindi Moral Stories, Islamic Knowledge Hindi, Deen ki Baatein, Science Facts in Hindi, Indian History Facts, Basic Law and Kanoon Hindi, Sana's Digital Library, Bachon ki Kahaniyaan, Horror Stories Hindi">
-    <meta name="description" content="Sana's Perspective: Deen, Science, Itihaas, Coding aur Kahaniyon ki digital library. Ek aisi jagah jahan mehnat aur hunar se seekhne ko milta hai.">
-    <meta name="author" content="Sana Rahman">
-
+    <meta name="google-site-verification" content="zFnq8cLLNpEBhuHt25BPfxLHZb8_2Re8iQHThepnag4" />
     <style>
-        body { 
-            background-color: #aafff4c1; 
-            color: #3331f1; 
-            font-family: sans-serif; 
-            text-align: center; 
-            padding: 15px; 
-        }
-        .main-table { 
-            width: 100%; 
-            max-width: 400px; 
-            margin: 0 auto; 
-            border-collapse: collapse; 
-        }
-        h1 { 
-            color: #d81b60; 
-            text-transform: uppercase; 
-            margin: 10px 0; 
-        }
-        .sub-table { 
-            width: 100%; 
-            border-collapse: collapse; 
-        }
-        .sub-table td { 
-            padding: 5px; 
-        }
-
-        /* --- MASTER BUTTON STYLE (Ek hi jagah sari styling) --- */
-        .base-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            height: 48px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 14px;
-            width: 100%;
-            box-sizing: border-box;
-            box-shadow:2px 2px 2px blue,3px 3px 3px black,4px 4px 4px red, inset 0px 4px  7px black;
-        }
-
-        /* --- INDIVIDUAL COLOR VARIATIONS --- */
-        .btn-dark { background: #2c3e50; }
-        .btn-green { background: #009432; }
-        .btn-code { background: #3c2bffb0; box-shadow: 2px 2px 2px red, 3px 3px 3px black; }
-        .btn-library { background: linear-gradient(-45deg, #d81b60, #6a1b9a); width: 100%; margin-bottom: 8px; }
-        .btn-islam { background: #28a745; }
-        .btn-science { background: #007bff; }
-        .btn-history { background: #ffc107; color: black; }
-        .btn-kanoon { background: #dc3545; }
+        body { background:#ccfff8; font-family:sans-serif; text-align:center; padding:15px; margin:0; }
+        .main-box { width:100%; max-width:380px; margin:0 auto; }
+        h1 { color:#d81b60; text-transform:uppercase; margin:15px 0 5px 0; }
+        .tagline{ font-style:italic; color:#ff7300; font-weight:bold; margin-bottom:20px; }
         
-        /* Side-by-side flex container for horizontal buttons */
-        .btn-row {
-            display: flex;
-            gap: 10px;
-            margin: 5px 0;
+        .base-btn{
+            display:flex; justify-content:center; align-items:center;
+            text-decoration:none; color:white; height:52px;
+            border-radius:14px; font-weight:bold; font-size:15px;
+            width:100%; box-shadow:0px 4px 0px rgba(0,0,0,0.2);
+            margin-bottom:12px;
         }
+        .btn-library{ background:linear-gradient(90deg,#6a1b9a,#d81b60); height:60px; font-size:18px; }
+        .btn-coding{ background:#000000; border:2px solid #333; }
+        .btn-moral{ background:#9c27b0; }
+        .btn-horror{ background:#2c3e50; }
+        .btn-islam{ background:#009432; }
+        .btn-science{ background:#007bff; }
+        .btn-history{ background:#ffb300; color:black; }
+        .btn-kanoon{ background:#dc3545; }
+        .btn-row{ display:flex; gap:12px; }
     </style>
 </head>
 <body>
+    <div class="main-box">
+        <h1>Sana's Perspective</h1>
+        <p class="tagline">Deen, Science, Itihaas aur Gyan</p>
 
-    <table class="main-table">
-        <!-- Section 1: Design Lab & Shortcuts -->
-        <tr>
-            <td>
-                <h1>Sana's Design Lab 🚀</h1>
-                
-                <table class="sub-table">
-                    <tr>
-                        <td><a href="lab.html" class="base-btn btn-dark">✨ Mere Sabhi Buttons</a></td>
-                    </tr>
-                </table>
+        <a href="stories.html" class="base-btn btn-library">📖 Sana's Digital Library</a>
+        
+        <a href="website-kaise-banaye.html" class="base-btn btn-coding">💻 Website Kaise Banaye? Code Yahan Hai</a>
+        
+        <div class="btn-row">
+            <a href="stories.html" class="base-btn btn-moral">📖 Moral Story</a>
+            <a href="horror.html" class="base-btn btn-horror">👻 Horror</a>
+        </div>
 
-                <table class="sub-table">
-                    <tr>
-                        <td><a href="demo.html" class="base-btn btn-green">🏢 Commercial</a></td>
-                        <td><a href="code.html" class="base-btn btn-code">Copy Code</a></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+        <div class="btn-row">
+            <a href="deen.html" class="base-btn btn-islam">📖 Islam ka Itihaas</a>
+            <a href="science.html" class="base-btn btn-science">🔬 Science</a>
+        </div>
 
-        <!-- Separator -->
-        <tr><td><hr style="border: 2px solid #061615; margin: 20px 0;"></td></tr>
+        <div class="btn-row">
+            <a href="hindustan.html" class="base-btn btn-history">📜 Sindhu Sabhyata</a>
+            <a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a>
+        </div>
 
-        <!-- Section 2: Sana's Perspective -->
-        <tr>
-            <td>
-                <h1 style="font-size: 24px;">Sana's Perspective</h1>
-                <p style="font-style: italic; color: #ff7300;">Deen, Science, Itihaas aur Gyan</p>
-                
-                <!-- Digital Library Full Width Button -->
-                <a href="stories.html" class="base-btn btn-library" style="width: 100%;">
-                    📖 Sana's Digital Library
-                </a>
-
-                <!-- Side-by-Side Moral Stories Buttons (Jaise tumne abhi pucha tha) -->
-                <div class="btn-row">
-                    <a href="stories.html" class="base-btn" style="background: linear-gradient(-45deg, #d81b60, #6a1b9a);">📖 Moral Story</a>
-                    <a href="horror.html" class="base-btn" style="background: linear-gradient(-45deg, #ffffff, #888888); color: black;">📖 Horror 👻</a>
-                </div>
-
-                <!-- Table for Main Categories / Buttons -->
-                <table class="sub-table" style="margin-top: 5px;">
-                    <tr>
-                        <td><a href="deen.html" class="base-btn btn-islam">📖 Islam ka Itihaas</a></td>
-                        <td><a href="science.html" class="base-btn btn-science">🔬 Science</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="hindustan.html" class="base-btn btn-history">📜 Sindhu Sabhyata</a></td>
-                        <td><a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-
-        <!-- Footer -->
-        <tr>
-            <td style="padding-top: 30px; font-size: 12px; color: #777;">
-                <p><i>"Duniya ko dikhana hai ki mehnat se kya banaya ja sakta hai"</i></p>
-                <p>© 2026 Sana's Perspective.</p>
-            </td>
-        </tr>
-    </table>
-
+        <div style="margin-top:30px; font-size:11px; color:#777;">
+            <p>© 2026 Sana's Perspective</p>
+            <a href="lab.html" style="color:#999; text-decoration:none;">Design Lab</a>
+        </div>
+    </div>
+    
+    
 </body>
 </html>
