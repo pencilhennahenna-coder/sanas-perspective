@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyright Free Moral Stories for YouTube & Kids - Sana's Perspective</title>
+
+    <!-- 1. SEO & Copyright-Free Meta Tags -->
+    <meta name="author" content="Sana">
+    <meta name="description" content="100% Free & Copyright Free Moral Stories for YouTube Creators, Voiceover Artists & Kids. Read and use high-quality Hindi Moral Stories for animation & educational videos without copyright strikes.">
+    <meta name="keywords" content="copyright free moral stories for youtube, free to use kids stories for voiceover, no copyright hindi stories, reusable moral stories in hindi, copyright free scripts for animation, royalty free hindi kahaniyan, fair use kids stories hindi, free content for video creators, copyright free bedtime stories, bacchon ki kahaniyan">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* 📢 YouTube Creators Disclaimer Box */
+        .creator-notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 12px auto 18px auto;
+            max-width: 500px;
+            font-size: 13px;
+            border: 1px solid #ffeeba;
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        /* 🎯 2-कॉलम ग्रिड लेआउट (1 लाइन में 2 बटन) */
+        .story-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 बराबर कॉलम */
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .story-btn {
+            cursor: pointer;
+            border: 1.5px solid #28a745;
+            border-radius: 16px;
+            padding: 12px 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: 0.2s;
+        }
+
+        .story-btn:hover {
+            transform: scale(1.03);
+            background-color: #e8f5e9;
+        }
+
+        .story-btn span {
+            font-weight: bold;
+            font-size: 13px;
+            color: #28a745;
+        }
+
+        /* पॉप-अप (Modal Window) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .modal-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 550px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: left;
+            position: relative;
+        }
+
+        .modal-card h3 {
+            color: #28a745;
+            margin-top: 0;
+            font-size: 20px;
+            border-bottom: 2px solid #c3e6cb;
+            padding-bottom: 8px;
+        }
+
+        .modal-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .moral-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #28a745;
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #155724;
+            border-radius: 4px;
+        }
+
+        /* 🔊 ऑडियो बटन स्टाइल */
+        .audio-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(45deg, #28a745, #20c997);
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: #28a745; font-size: 22px;">
+        🦁 Bacchon ki Pyari Moral Stories 🐭
+    </h1>
+    
+    <p style="font-size: 13px; color: #555; max-width: 600px; margin: 5px auto 10px auto;">
+        Majedar kahaniyan jo bacchon ko acche akhlaq, imaandari aur samajhdaari sikhayein.
+    </p>
+
+    <!-- 📢 Notice for YouTube Creators -->
+    <div class="creator-notice">
+        📢 <b>For YouTube Creators & Voiceover Artists:</b> Ye sabhi kahaniyan 100% Free & Reusable hain. Aap inka upayog apne YouTube videos, animation ya voiceover ke liye bina kisi copyright strike ke kar sakte hain!
+    </div>
+
+    <!-- 2-कॉलम ग्रिड बटन यहाँ अपने आप बनेंगे -->
+    <div id="buttons-container" class="story-menu"></div>
+
+    <!-- Quote Box -->
+    <div style="margin-top: 20px; font-style: italic; color: #555; background: #e8f5e9; padding: 12px; border-radius: 8px; display: inline-block; max-width: 500px; border: 1px solid #c3e6cb;">
+        "Acchi kahaniyan bacchon ki soch ko sahi rasta dikhati hain."
+    </div>
+
+    <!-- पॉप-अप Modal -->
+    <div id="story-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="audio-btn" onclick="speakText()">🔊 सुनिए (Audio)</button>
+            <div id="story-content"></div>
+            <button class="close-btn" onclick="closeModal()">✖ बंद करें</button>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="home-btn">🏠 Wapas Home Page par Jayein</a>
+
+    <script>
+        // ==========================================
+        //  STEP-BY-STEP डेटा लिस्ट (यहाँ नई कहानी जोड़ें)
+        // ==========================================
+        const myData = [
+            {
+                icon: "🦁",
+                title: "Sher aur Chuha",
+                content: `
+                    <h3>Sher aur Chote Chuhe ki Kahani</h3>
+                    <p>Ek baar ek sher so raha tha. Ek chota chuha uske upar koodne laga, jis se sher ki neend khul gayi. Sher ne gusse mein chuhe ko pakad liya. Chuhe ne kaha, "Mujhe chhod do, shayad kabhi main aapke kaam aa jaun." Sher hansa aur use chhod diya.</p>
+                    <p>Kuch dino baad sher ek shikari ke jaal mein phans gaya. Chuhe ne jaal ke dhagon ko apne tez daanton se kaat diya aur sher ki jaan bachaye.</p>
+                    <div class="moral-box">💡 Moral (Seekh): Kisi ko chota samajh kar kamzor mat samjho. Har kisi ki apni ahmiyat hoti hai.</div>
+                `
+            },
+            {
+                icon: "🐦",
+                title: "Pyasa Kauwa",
+                content: `
+                    <h3>Aqlmand Pyasa Kauwa</h3>
+                    <p>Ek kauwe ko bahut pyas lagi thi. Use ek matka mila, lekin usme pani bahut niche tha aur kauwe ki choonch wahan tak nahi pahunch pa rahi thi.</p>
+                    <p>Kauwe ne haar nahi mani. Usne aas-paas se chote-chote kankar uthaye aur ek-ek karke matke mein daal diye. Pani upar aa gaya aur kauwe ne pet bhar kar pani piya.</p>
+                    <div class="moral-box">💡 Moral (Seekh): Jahan chah hai, wahan raah hai. Mehnat aur samajhdaari se har mushkil aasan ho jati hai.</div>
+                `
+            },
+            {
+                icon: "🐶",
+                title: "Lalchi Kutta",
+                content: `
+                    <h3>Lalchi Kutta aur Roti ka Tukda</h3>
+                    <p>Ek kutte ko ek roti ka tukda mila. Woh use muh mein dabaye nadi ke pul se guzar raha tha. Usne nadi ke pani mein apni hi parchhai dekhi.</p>
+                    <p>Kutte ne samjha ki pani mein koi doosra kutta hai jiske paas bhi roti hai. Lalach mein aakar usne doosri roti lene ke liye jaise hi bhaunkna shuru kiya, uski apni roti bhi pani mein gir gayi.</p>
+                    <div class="moral-box">💡 Moral (Seekh): Lalach buri bala hai. Jo paas hai usme khush rehna chahiye.</div>
+                `
+            },
+            {
+                icon: "🐢",
+                title: "Kachhua aur Khargosh",
+                content: `
+                    <h3>Kachhue aur Khargosh ki Daud</h3>
+                    <p>Khargosh ko apni tez chaal par bada ghamand tha. Usne kachhue ko daud ki chunauti di. Daud shuru hui toh khargosh bahut aage nikal gaya aur raste mein ek ped ke niche so gaya.</p>
+                    <p>Kachhua bina ruke dheere-dheere chalta raha aur khargosh ke sote hi jeet ki rekha tak pahunch gaya.</p>
+                    <div class="moral-box">💡 Moral (Seekh): Ghamand nahi karna chahiye. Lagataar mehnat karne wala hamesha jeetta hai.</div>
+                `
+            }
+        ];
+
+        // 1. 2-कॉलम ग्रिड बटन बनाने का लॉजिक
+        function makeButtons() {
+            let container = document.getElementById('buttons-container');
+            let html = "";
+            
+            for (let i = 0; i < myData.length; i++) {
+                html += `
+                    <div class="story-btn" onclick="openModal(${i})">
+                        <span>${myData[i].icon} ${myData[i].title}</span>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        // 2. पॉप-अप खोलने का लॉजिक
+        function openModal(index) {
+            document.getElementById('story-content').innerHTML = myData[index].content;
+            document.getElementById('story-modal').style.display = 'flex';
+        }
+
+        // 3. पॉप-अप बंद करने का लॉजिक
+        function closeModal() {
+            document.getElementById('story-modal').style.display = 'none';
+            window.speechSynthesis.cancel();
+        }
+
+        // 4. आवाज़ से सुनाने का लॉजिक
+        function speakText() {
+            let text = document.getElementById('story-content').innerText;
+            window.speechSynthesis.cancel();
+            
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'hi-IN';
+            speech.rate = 0.9;
+            window.speechSynthesis.speak(speech);
+        }
+
+        // पेज चालू होते ही बटन बन जाएँगे
+        makeButtons();
+    </script>
+
+</body>
+</html>

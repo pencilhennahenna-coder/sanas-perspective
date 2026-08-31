@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sana's Perspective - Horror Stories</title>
+    <title>Sana's Perspective - Horror Stories | डरावनी कहानियाँ</title>
     
-    <meta name="keywords" content="Horror Stories in Hindi, Darr wali kahaniyan, Bhoot ki kahani, Scary Stories Hindi, Sana's Perspective Horror">
-    <meta name="description" content="Sana's Perspective ki Horror Story collection. Padhiye aur suniye dil ko dahla dene wali aur romanchak darawani kahaniyan.">
     <meta name="author" content="Sana Rahman">
+    <meta name="description" content="100% Free & Copyright Free Horror Stories in Hindi for YouTube Creators, Voiceover Artists & Readers. Read and use scary ghost stories for video creation without copyright strikes.">
+    <meta name="keywords" content="Horror Stories in Hindi, Darr wali kahaniyan, Bhoot ki kahani, Scary Stories Hindi, Sana's Perspective Horror, copyright free horror stories for youtube, free scary scripts for voiceover, no copyright ghost stories hindi, reusable horror story scripts">
+    <meta name="robots" content="index, follow">
 
     <style>
         body { 
@@ -16,160 +17,330 @@
             font-family: sans-serif; 
             text-align: center; 
             padding: 15px; 
-        }
-        .main-container { 
-            width: 100%; 
-            max-width: 450px; 
-            margin: 0 auto; 
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.3);
-            box-sizing: border-box;
-        }
-        h1 { 
-            color: #ff3333; 
-            text-transform: uppercase; 
-            margin-bottom: 5px; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            font-size: 24px;
-        }
-        
-        /* Image / Book Cover Style */
-        .cover-img-box {
-            margin: 15px 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-            border: 1px solid #333;
-        }
-        .cover-img-box img {
-            width: 50%;
-            height: auto;
-            display: inline-block;
+            margin: 0;
         }
 
-        .story-box {
+        /* 📢 YouTube Creators Disclaimer Box */
+        .creator-notice {
+            background-color: #2a1515;
+            color: #ff8888;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 12px auto 18px auto;
+            max-width: 500px;
+            font-size: 13px;
+            border: 1px solid #ff3333;
             text-align: left;
-            background: #2a2a2a;
+            line-height: 1.5;
+        }
+
+        /* 🎯 2-कॉलम ग्रिड लेआउट (1 लाइन में 2 बटन) */
+        .horror-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 बराबर कॉलम */
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .horror-btn {
+            cursor: pointer;
+            border: 1.5px solid #ff3333;
+            border-radius: 16px;
+            padding: 12px 10px;
+            background: #1e1e1e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0px 0px 8px rgba(255, 0, 0, 0.2);
+            transition: 0.2s;
+        }
+
+        .horror-btn:hover {
+            transform: scale(1.03);
+            background-color: #331010;
+        }
+
+        .horror-btn span {
+            font-weight: bold;
+            font-size: 13px;
+            color: #ff4d4d;
+        }
+
+        /* पॉप-अप Window (Modal) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
             padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            line-height: 1.6;
+            box-sizing: border-box;
+        }
+
+        .modal-card {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            width: 100%;
+            max-width: 550px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            text-align: left;
+            position: relative;
+            border: 1px solid #ff3333;
+        }
+
+        .modal-card h3 {
+            color: #ff3333;
+            margin-top: 0;
+            font-size: 20px;
+            border-bottom: 2px solid #551111;
+            padding-bottom: 8px;
+        }
+
+        .modal-card p {
             font-size: 15px;
-            border-left: 4px solid #ff3333;
+            line-height: 1.7;
+            color: #ccc;
+        }
+
+        /* 🖼️ क्लिक योग्य इमेज बटन स्टाइल */
+        .img-preview-btn {
+            background: #2a1515;
+            color: #ff8888;
+            border: 1px dashed #ff3333;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            margin: 10px 0;
+            display: inline-block;
+            font-weight: bold;
+            transition: 0.2s;
         }
         
-        /* Buttons Style */
+        .img-preview-btn:hover {
+            background: #3a1a1a;
+            color: #ffffff;
+        }
+
+        /* Action Buttons Inside Modal */
         .btn-group {
             display: flex;
             gap: 10px;
-            margin-top: 15px;
+            margin-bottom: 15px;
         }
-        .btn {
+
+        .action-btn {
             flex: 1;
-            padding: 10px;
+            padding: 8px 12px;
             border: none;
-            border-radius: 8px;
-            font-weight: bold;
+            border-radius: 15px;
             cursor: pointer;
-            font-size: 14px;
-            transition: 0.2s opacity;
+            font-size: 13px;
+            font-weight: bold;
         }
-        .listen-btn {
+
+        .audio-btn {
             background-color: #ff9900;
             color: #000;
         }
+
         .copy-btn {
             background-color: #27ae60;
             color: #fff;
         }
-        .btn:hover {
-            opacity: 0.85;
+
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
         }
 
-        .back-btn {
+        .home-btn {
             display: inline-block;
             text-decoration: none;
             color: white;
             background: #ff3333;
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 10px 22px;
+            border-radius: 25px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <div class="main-container">
-        <h1>👻 Rooh ka Kamra</h1>
-        <p style="font-style: italic; color: #aaa; margin-top: 0;">Sana's Perspective - Darawani Kahaniyan</p>
-        
-        <!-- Story Book Banner/Cover Image -->
-        <div class="cover-img-box">
-            <img src="30c6e671af702bbe82299bbe30453a5563e225f8860dfb875ce2ae42cbb3e6f1.0.jpeg" alt="Purane Hostel ki Woh Raat Cover">
-        </div>
+    <h1 style="color: #ff3333; font-size: 24px;">👻 koi hai 💀</h1>
+    <p style="font-style: italic; color: #aaa; margin-top: 0; font-size: 14px;">
+        Sana's Perspective - Dil ko dahla dene wali kahaniyan
+    </p>
 
-        <div class="story-box">
-            <h3 style="color: #ff6666; margin-top: 0;">Kahani: Purane Hostel ki Woh Raat</h3>
-            <p style="font-size: 13px; color: #ff9999; margin-bottom: 10px;">By Sana Rahman</p>
-            
-            <!-- Story Content -->
-            <div id="storyContent">
-                <p>Raat ke theek 2 baj rahe the. Hostel ka pura corridor sunsan tha, bas meri ghadi ki 'tic-tic' ki aawaz goonj rahi thi. Humne naye-naye is purane college mein admission liya tha, aur mujhe akele room mein rehna pada tha.</p>
-                <p>Achanak, room ke darwaze par kisi ne dheere se <strong>teen baar knock kiya</strong>. Maine socha shayad koi dost hoga. Jaise hi maine darwaza khola, bahar koi nahi tha... lekin zameen par ek purani, dhool se bhari diary padi thi.</p>
-                <p>Jaise hi maine us diary ko uthane ke liye haath badhaya, room ki saari lights apne aap bujh gayi, aur paas wale band kamre se aisi aawaz aane lagi jaise koi zameen par zorse chain ghaseet raha ho...</p>
-                <p>"आर्यन ने हिम्मत जुटाकर दरवाजा खोला, लेकिन सामने कोई नहीं था। ठंडी हवा का एक झोंका उसे छूकर निकल गया। नीचे जमीन पर एक पुरानी, धूल से भरी डायरी पड़ी थी। आर्यन ने उसे उठाया। डायरी के पन्नों से पुरानी स्याही और सड़न की गंध आ रही थी। जैसे ही उसने डायरी पकड़ी, गलियारी की पीली लाइटें टिमटिमाने लगीं।
-                
-
-अचानक एक तेज आवाज के साथ हॉस्टल की सारी लाइटें गुल हो गईं। पूरा हॉस्टल घने अंधेरे में डूब गया। आर्यन ने अपने मोबाइल की फ्लैशलाइट जलाई। तभी, बगल वाले कमरे नंबर 404 से, जो सालों से बंद पड़ा था, किसी भारी जंजीर को घसीटने की आवाज आई—'खररर... खररर...'। वह आवाज फर्श पर रगड़ खाती लोहे की बेडियों जैसी थी।
-आर्यन का दिल तेजी से धड़कने लगा। वह अपने कमरे में वापस भागा और दरवाजा अंदर से बंद कर लिया। उसने कांपते हाथों से वह डायरी खोली। पहले पन्ने पर बड़े अक्षरों में एक नाम लिखा था—'राघव'। राघव इस हॉस्टल का एक पूर्व छात्र था जो कई साल पहले रहस्यमयी तरीके से गायब हो गया था
-आर्यन ने डायरी पढ़ना शुरू किया। राघव ने लिखा था, "वह साया अब मेरे बहुत करीब है। मैंने उसे पुराने तहखाने में देखा था। उसकी आंखों में कोई पुतली नहीं है, सिर्फ अंधेरा है। वह जंजीरें लेकर आता है ताकि उन लोगों को कैद कर सके जो उसकी नींद खराब करते हैं।" आर्यन को महसूस हुआ कि कमरे का तापमान अचानक गिर गया है।
-राघव का आखिरी संदेश डरावना था: "अगर तुम्हें यह डायरी मिली है, तो इसका मतलब है कि उसने तुम्हें चुन लिया है। तीन दस्तक उसकी चेतावनी हैं, और जंजीरों की आवाज उसकी दस्तक।" तभी आर्यन के कमरे की दीवार के पीछे से फिर वही 'खररर... खररर...' की आवाज आई, जैसे कोई जंजीर लेकर दीवार के दूसरी तरफ चल रहा हो।
-आर्यन की हिम्मत जवाब दे रही थी। उसने कमरे के की-होल (keyhole) से बाहर झांकने की कोशिश की। गलियारी में धुंध छाई हुई थी। तभी उसने देखा कि कमरे नंबर 404 का भारी लोहे का दरवाजा धीरे-धीरे खुल रहा है। अंदर से एक सफेद धुआं बाहर निकल रहा था और जंजीरों की आवाज तेज होती जा रही थी।
-अंधेरे में से एक विशाल, काली आकृति बाहर निकली। उसके शरीर से लंबी-लंबी लोहे की जंजीरें लटकी हुई थीं जो जमीन पर रगड़ खा रही थीं। उस आकृति का कोई चेहरा नहीं था, बस दो जलती हुई लाल आंखें थीं। वह साया सीधे आर्यन के कमरे की तरफ बढ़ रहा था। हर कदम के साथ जंजीरों का शोर आर्यन के कानों को फाड़ रहा था।
-साया आर्यन के दरवाजे के पास आकर रुक गया। 'ठक, ठक, ठक'। फिर से वही तीन दस्तक। इस बार दस्तक दरवाजे पर नहीं, बल्कि आर्यन के दिमाग के अंदर सुनाई दी। जंजीरें धीरे-धीरे आर्यन के कमरे के नीचे की दरार से अंदर आने लगीं। आर्यन ने चिल्लाने की कोशिश की, लेकिन उसकी आवाज नहीं निकली।
-
-अगली सुबह, हॉस्टल की गलियारी हमेशा की तरह शांत थी। कमरा नंबर 404 फिर से बंद था। वार्डन ने जब आर्यन का कमरा खोला, तो वह खाली था। बिस्तर पर सिर्फ एक पुरानी, धूल भरी डायरी पड़ी थी। डायरी के आखिरी पन्ने पर एक नया संदेश लिखा था, जिसे आर्यन की लिखावट में पहचाना जा सकता था: "अब अगली बारी तुम्हारी है।"</p>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="btn-group">
-                <button onclick="listenStory()" class="btn listen-btn">🔊 Listen Story</button>
-                <button onclick="copyStoryText()" class="btn copy-btn">📋 Copy Story</button>
-            </div>
-        </div>
-
-        <a href="index.html" class="back-btn">🏠 Home Page Par Jaayein</a>
+    <div class="creator-notice">
+        📢 <b>For YouTube Creators:</b> Ye sabhi Horror Stories 100% Free & Reusable hain. Aap inka upayog apne YouTube videos, animation ya voiceover ke liye bina kisi copyright strike ke kar sakte hain!
     </div>
 
-    <!-- JavaScript Logic -->
+    <div id="buttons-container" class="horror-menu"></div>
+
+    <div style="margin-top: 20px; font-style: italic; color: #bbb; background: #1a1a1a; padding: 12px; border-radius: 8px; display: inline-block; max-width: 500px; border: 1px solid #333;">
+        "Kuch khamoshiyan sirf sannata nahi hoti... kisi ke hone ka ehsaas hoti hain."
+    </div>
+
+    <!-- 📖 Story Modal -->
+    <div id="horror-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="btn-group">
+                <button class="action-btn audio-btn" onclick="speakStory()">🔊 Listen Story</button>
+                <button class="action-btn copy-btn" onclick="copyStory()">📋 Copy Story</button>
+            </div>
+            <div id="horror-content"></div>
+            <button class="close-btn" onclick="closeModal()">✖ बंद करें</button>
+        </div>
+    </div>
+
+    <!-- 🖼️ Separate Image View Modal -->
+    <div id="image-modal" class="modal-overlay" style="z-index: 2000;">
+        <div class="modal-card" style="text-align: center; max-width: 450px;">
+            <img id="modal-img-src" src="" alt="Story Scene Image" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #ff3333;">
+            <button class="close-btn" onclick="closeImageModal()">✖ Close Image</button>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="home-btn">🏠 Wapas Home Page Par Jayein</a>
+
     <script>
-        // 1. Listen Story Function (Hindi Speech)
-        function listenStory() {
-            const storyText = document.getElementById("storyContent").innerText;
+        // ==========================================
+        //  STEP-BY-STEP डेटा लिस्ट
+        // ==========================================
+        const myData = [
+            {
+                icon: "🚪",
+                title: "Purane Hostel ki Raat",
+                content: `
+                    <h3>Kahani: Purane Hostel ki Woh Raat</h3>
+                    <p><b>By Sana Rahman</b></p>
+                    <p>Raat ke theek 2 baj rahe the. Hostel ka pura corridor sunsan tha, bas meri ghadi ki 'tic-tic' ki aawaz goonj rahi thi. Humne naye-naye is purane college mein admission liya tha, aur mujhe akele room mein rehna pada tha.</p>
+                    <p>Achanak, room ke darwaze par kisi ne dheere se <b>teen baar knock kiya</b>. Maine socha shayad koi dost hoga. Jaise hi maine darwaza khola, bahar koi nahi tha... lekin zameen par ek purani, dhool se bhari diary padi thi.</p>
+
+                    <!-- 🖼️ Sahi ki gayi Image path -->
+                    <button class="img-preview-btn" onclick="openImageModal('images/2.jpg')">🖼️ Click to View Hostel Scene Image</button>
+
+
+                    <p>Aryan ne himmat jutakar darwaza khola, lekin samne koi nahi tha. Thandi hawa ka ek jhonka use chhookar nikal gaya. Neeche zameen par ek purani, dhool se bhari diary padi thi. Aryan ne use uthaya. Diary ke pannon se purani syahi aur sadan ki gandh aa rahi thi.</p>
+                    <p>Achanak ek tez aawaz ke sath hostel ki saari lights gul ho gayin. Pura hostel ghane andhere mein doob gaya. Aryan ne apne mobile ki flashlight jalai. Tabhi, bagal wale kamra number 404 se, jo salon se band pada tha, kisi bhari zanjeer ko ghaseetne ki aawaz aai—'khararr... khararr...'.</p>
+                    
+                    
+                     <button class="img-preview-btn" onclick="openImageModal('images/d.jpeg')">🖼️ Click to View Hostel Scene Image</button>
+                    
+                    
+                    <p>Aryan ne kamre ke key-hole se bahar jhaankne ki koshish ki. Galiyanre mein dhundh chhai hui thi. Tabhi usne dekha ki kamra number 404 ka bhari lohe ka darwaza dheere-dheere khul raha hai. Andhere mein se ek vishal, kaali aakriti bahar nikli. Uske sharir se meel lambi lohe ki zanjeerein latki hui thin.</p>
+                    
+                    <button class="img-preview-btn" onclick="openImageModal('images/g.jpg')">🖼️ Click to View Hostel Scene Image</button>
+                    
+                    <p>Agli subah, warden ne jab Aryan ka kamra khola, toh woh khali tha. Bistar par sirf ek purani diary padi thi. Diary ke aakhiri panne par naya sandesh likha tha: <i>"Ab agli baari tumhari hai."</i></p>
+                `
+            },
+            {
+                icon: "🏚️",
+                title: "Khandahar ki Aawaz",
+                content: `
+                    <h3>Kahani: Purana Khandahar aur Kaala Saaya</h3>
+                    <p><b>By Sana Rahman</b></p>
+                    <p>Gaon ke kinare bani woh purani haveli salon se veeran padi thi. Log kehte the ki wahan shaam ke baad jana apni jaan jokhim mein dalna hai.</p>
+                    
+                    
+                     
+                    
+                    <p>Ek raat tin doston ne wahan jane ka faisla kiya. Jaise hi unhone haveli ke mukhya darwaze par kadam rakha, unke piche ka darwaza khud-ba-khud zorse band ho gaya...</p>
+                `
+            }
+        ];
+
+        // 1. 2-कॉलम ग्रिड बटन बनाने का लॉजिक
+        function makeButtons() {
+            let container = document.getElementById('buttons-container');
+            let html = "";
             
-            window.speechSynthesis.cancel(); // Stop any ongoing speech
+            for (let i = 0; i < myData.length; i++) {
+                html += `
+                    <div class="horror-btn" onclick="openModal(${i})">
+                        <span>${myData[i].icon} ${myData[i].title}</span>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
 
-            const speech = new SpeechSynthesisUtterance(storyText);
-            speech.lang = "hi-IN";
-            speech.rate = 0.85; // Medium slow speed for thriller vibe
+        // 2. कहानी पॉप-अप खोलने का लॉजिक
+        function openModal(index) {
+            document.getElementById('horror-content').innerHTML = myData[index].content;
+            document.getElementById('horror-modal').style.display = 'flex';
+        }
+
+        // 3. कहानी पॉप-अप बंद करने का लॉजिक
+        function closeModal() {
+            document.getElementById('horror-modal').style.display = 'none';
+            window.speechSynthesis.cancel();
+        }
+
+        // 4. इमेज पॉप-अप खोलने का लॉजिक
+        function openImageModal(imgUrl) {
+            if(!imgUrl) {
+                alert("इमेज का लिंक अभी सेट नहीं किया गया है।");
+                return;
+            }
+            document.getElementById('modal-img-src').src = imgUrl;
+            document.getElementById('image-modal').style.display = 'flex';
+        }
+
+        // 5. इमेज पॉप-अप बंद करने का लॉजिक
+        function closeImageModal() {
+            document.getElementById('image-modal').style.display = 'none';
+        }
+
+        // 6. आवाज़ से सुनाने का लॉजिक
+        function speakStory() {
+            let text = document.getElementById('horror-content').innerText;
+            window.speechSynthesis.cancel();
+            
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'hi-IN';
+            speech.rate = 0.85;
             speech.pitch = 0.95;
-
             window.speechSynthesis.speak(speech);
         }
 
-        // 2. Copy Story Function
-        function copyStoryText() {
-            const storyText = document.getElementById("storyContent").innerText;
-            
-            navigator.clipboard.writeText(storyText).then(() => {
-                alert("कहानी सफलतापूर्वक कॉपी हो गई है!");
+        // 7. टेक्स्ट कॉपी करने का लॉजिक
+        function copyStory() {
+            let text = document.getElementById('horror-content').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("कहानी सफलता पूर्वक कॉपी हो गई है!");
             }).catch(err => {
                 alert("कॉपी करने में समस्या आई, कृपया दोबारा प्रयास करें।");
             });
         }
+
+        // पेज चालू होते ही बटन बन जाएँगे
+        makeButtons();
     </script>
 
 </body>
