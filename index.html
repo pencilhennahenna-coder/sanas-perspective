@@ -6,27 +6,94 @@
     <title>Sana's Perspective</title>
     <meta name="google-site-verification" content="zFnq8cLLNpEBhuHt25BPfxLHZb8_2Re8iQHThepnag4" />
     <style>
-        body { background:#ccfff8; font-family:sans-serif; text-align:center; padding:15px; margin:0; }
-        .main-box { width:100%; max-width:380px; margin:0 auto; }
-        h1 { color:#d81b60; text-transform:uppercase; margin:15px 0 5px 0; }
-        .tagline{ font-style:italic; color:#ff7300; font-weight:bold; margin-bottom:20px; }
-        
-        .base-btn{
-            display:flex; justify-content:center; align-items:center;
-            text-decoration:none; color:white; height:52px;
-            border-radius:14px; font-weight:bold; font-size:15px;
-            width:100%; box-shadow:0px 4px 0px rgba(0,0,0,0.2);
-            margin-bottom:12px;
+        body { 
+            background: #ccfff8; 
+            font-family: sans-serif; 
+            text-align: center; 
+            padding: 15px; 
+            margin: 0; 
         }
-        .btn-library{ background:linear-gradient(90deg,#6a1b9a,#d81b60); height:60px; font-size:18px; }
-        .btn-coding{ background:#000000; border:2px solid #333; }
-        .btn-moral{ background:#9c27b0; }
-        .btn-horror{ background:#2c3e50; }
-        .btn-islam{ background:#009432; }
-        .btn-science{ background:#007bff; }
-        .btn-history{ background:#ffb3ff; color:black; box-shadow:2px 2px blue;}
-        .btn-kanoon{ background:#dc3545; }
-        .btn-row{ display:flex; gap:12px; }
+
+        .main-box { 
+            width: 100%; 
+            max-width: 380px; 
+            margin: 0 auto; 
+            display: flex;                /* Buttons ko side-by-side laane ke liye */
+            flex-wrap: wrap;              /* Do se zyada buttons hone par next line me bhejne ke liye */
+            justify-content: space-between; /* Dono buttons ke beech barabar jagah dene ke liye */
+        }
+
+        h1 { 
+            color: #d81b60; 
+            text-transform: uppercase; 
+            margin: 15px 0 5px 0; 
+            width: 100%;                  
+        }
+
+        .tagline { 
+            font-style: italic; 
+            color: #ff7300; 
+            font-weight: bold; 
+            margin-bottom: 20px; 
+            width: 100%;                  
+        }
+
+        .section-title {
+            width: 100%;
+            color: #d81b60;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0 10px 0;
+            border-bottom: 2px dashed #d81b60;
+            padding-bottom: 4px;
+        }
+
+        .base-btn {
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            text-decoration: none; 
+            color: white; 
+            height: 52px;
+            border-radius: 14px; 
+            font-weight: bold; 
+            font-size: 13px;              
+            width: 48%;                   /* Exact 2 buttons per line */
+            box-sizing: border-box;       
+            box-shadow: 0px 4px 0px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+            text-align: center;
+            padding: 4px;
+        }
+
+        /* Full Width Button */
+        .full-btn {
+            width: 100%;
+        }
+
+        /* Category Button Colors */
+        .btn-coding { background:#000000; border:2px solid #333; }
+        .btn-moral { background:#9c27b0; }
+        .btn-horror { background:#2c3e50; }
+        .btn-islam { background:#009432; }
+        .btn-science { background:#007bff; }
+        .btn-history { background:#ffb3ff; color:black; box-shadow:0px 4px 0px blue; }
+        .btn-kanoon { background:#dc3545; }
+        .btn-poem { background:#ff69b4; }
+        .btn-english { background:#ff1493; }
+
+        /* 🔴 YouTube Special Button Style */
+        .btn-yt { 
+            background: #FF0000; 
+            box-shadow: 0px 4px 0px #b30000;
+        }
+
+        .footer-box {
+            width: 100%;
+            margin-top: 30px; 
+            font-size: 11px; 
+            color: #777;
+        }
     </style>
 </head>
 <body>
@@ -34,39 +101,32 @@
         <h1>Sana's Perspective</h1>
         <p class="tagline">Deen, Science, Itihaas aur Gyan</p>
 
+        <a href="website-kaise-banaye.html" class="base-btn btn-coding full-btn">💻 Website Kaise Banaye? Code Yahan Hai</a>
         
+        <a href="mstories.html" class="base-btn btn-moral">📖 Moral Story</a>
+        <a href="horror.html" class="base-btn btn-horror">👻 Horror</a>
+
+        <a href="deen.html" class="base-btn btn-islam">📖 Islam ka Itihaas</a>
+        <a href="science.html" class="base-btn btn-science">🔬 Science</a>
+
+        <a href="hindustan.html" class="base-btn btn-history">📜 Sindhu Sabhyata</a>
+        <a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a>
         
-        <a href="website-kaise-banaye.html" class="base-btn btn-coding">💻 Website Kaise Banaye? Code Yahan Hai</a>
-        
-        <div class="btn-row">
-            <a href="mstories.html" class="base-btn btn-moral">📖 Moral Story</a>
-            <a href="horror.html" class="base-btn btn-horror">👻 Horror</a>
-        </div>
+        <a href="kidspoem.html" class="base-btn btn-poem">📚 Poem Library</a>
+        <a href="english.html" class="base-btn btn-english">📚 English Learning</a>
 
-        <div class="btn-row">
-            <a href="deen.html" class="base-btn btn-islam">📖 Islam ka Itihaas</a>
-            <a href="science.html" class="base-btn btn-science">🔬 Science</a>
-        </div>
+        <div class="section-title">▶️ My YouTube Channels</div>
 
-        <div class="btn-row">
-            <a href="hindustan.html" class="base-btn btn-history">📜 Sindhu Sabhyata</a>
-            <a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a>
-        </div>
-        
-     
+        <a href="https://www.youtube.com/@SanasPerspective" target="_blank" class="base-btn btn-yt">🎥 Sana's Perspective</a>
+        <a href="https://www.youtube.com/@Apnapan-x4j" target="_blank" class="base-btn btn-yt">💅 Apnapan Hai Tumse</a>
 
-<div class="btn-row"> 
-  <a href="kidspoem.html" class="base-btn btn-history">📚 poem Library</a>
-</div>
+        <a href="https://www.youtube.com/@sanasWordBank" target="_blank" class="base-btn btn-yt">🗣️ Sana's World Bank</a>
+        <a href="https://www.youtube.com/@sana-naat" target="_blank" class="base-btn btn-yt">🌙 Naat Channel</a>
 
-
-
-        <div style="margin-top:30px; font-size:11px; color:#777;">
+        <div class="footer-box">
             <p>© 2026 Sana's Perspective</p>
             <a href="lab.html" style="color:#999; text-decoration:none;">Design Lab</a>
         </div>
     </div>
-    
-    
 </body>
 </html>
