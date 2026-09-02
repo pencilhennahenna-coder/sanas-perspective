@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>सहाबा-ए-किराम का जीवन परिचय | Sahaba History in Hindi</title>
-
-    <!-- 2. लेखक का नाम (Author Name) -->
-    <meta name="author" content="Sana">
-
-    <!-- 3. वेबसाइट का विवरण (Description - 150-160 शब्दों में Google के लिए) -->
-    <meta name="description" content="सहाबा-ए-किराम (रज़ि.) का संपूर्ण जीवन परिचय, इतिहास, ख़िलाफ़त का दौर, पैदाइश, वफ़ात और मुख्य कारनामों की जानकारी हिंदी में पढ़ें।">
-
-    <!-- 4. सर्च कीवर्ड्स (Keywords - लोग Google पर क्या सर्च करते हैं) -->
-    <meta name="keywords" content="Sahaba, Sahaba-e-Kiram, Hazrat Abu Bakr Siddiq, Hazrat Umar Farooq, Islamic History in Hindi, Khilafat, Islamic Knowledge, Sahaba History Hindi, सहाबा का इतिहास, हज़रत अबू बक्र, हज़रत उमर">
-
-    <!-- 5. रोबोट्स गाइडेंस (Google को पेज इंडेक्स करने की अनुमति) -->
-    <meta name="robots" content="index, follow">
+    <title>सहाबा-ए-किराम का जीवन परिचय</title>
     
     <style>
         body {
@@ -26,17 +14,18 @@
 
         .sahaba-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-            align-items: start;
+            grid-template-columns: 1fr;
+            gap: 10px;
         }
+        
+        
 
         details {
             background-color: #ffffff;
             border: 1px solid #c8e6c9;
             border-radius: 8px;
-            padding: 8px;
-            box-shadow: 3px 2px 5px rgba(0,0,0,0.8), inset 3px 2px 17px rgba(0,0,255,0.8);
+            padding: 10px;
+            box-shadow: 3px 2px 5px rgba(0,0,0,0.2);
         }
 
         summary {
@@ -44,6 +33,7 @@
             color: #1b5e20;
             cursor: pointer;
             outline: none;
+            font-size: 1.1em;
         }
 
         .content {
@@ -53,125 +43,178 @@
             font-size: 0.9em;
         }
 
-        /* 🔊 Bolne wale button ka style */
+        /* 🔊 स्पीच बटन */
         .audio-btn {
             background-color: #2e7d32;
             color: white;
             border: none;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 5px;
             cursor: pointer;
-            margin-bottom: 8px;
-            font-size: 0.8em;
+            margin-bottom: 10px;
+            font-size: 0.85em;
         }
 
-        .audio-btn:hover {
+        /* 🔘 टैब बटन */
+        .tab-buttons {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: #e0e0e0;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        .tab-btn.active {
             background-color: #1b5e20;
+            color: white;
+        }
+
+        /* 📄 टैब बॉक्स */
+        .tab-content {
+            display: none;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #1b5e20;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .hadees-box {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .hadees-box small {
+            color: #1b5e20;
+            font-weight: bold;
+            display: block;
+            margin-top: 3px;
         }
     </style>
 </head>
 <body>
+    
+    
 
     <h2>📌 सहाबा-ए-किराम का जीवन परिचय</h2>
 
     <div class="sahaba-grid">
 
+        <!-- 🟢 हज़रत अबू बक्र (रज़ि.) का मास्टर ढाँचा -->
         <details>
-    <summary>1. हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</summary>
-    <div class="content">
-        <button class="audio-btn" onclick="speakText(this)">🔊 सुनिए</button>
+            <summary>1. हज़रत अबू बक्र सिद्दीक़ (रज़ि.)</summary>
+            <div class="content">
 
-        <div class="text-to-read">
-            <p><b>परिचय:</b> आप इस्लाम के प्रथम ख़लीफ़ा और पैगंबर हज़रत मोहम्मद (सल्ल.) के सबसे करीबी साथी और ससुर थे।</p>
-            
-            <p><b>1. नाम व पैदाइश:</b></p>
-            <ul>
-                <li><b>पूरा नाम:</b> अब्दुल्लाह बिन उस्मान (अबू बक्र)</li>
-                <li><b>पैदाइश:</b> 573 ईस्वी, मक्का (सऊदी अरब)</li>
-                <li><b>लक़ब (उपाधि):</b> अस-सिद्दीक़ (सच्चा) और अतीक़</li>
-            </ul>
+                <!-- टैब बटन -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'abubakr-parichay')">परिचय</button>
+                    <button class="tab-btn" onclick="openTab(event, 'abubakr-hadees')">हदीसें & फ़ज़ीलत</button>
+                    <button class="tab-btn" onclick="openTab(event, 'abubakr-karname')">कारनामे & ख़िलाफ़त</button>
+                    <button class="tab-btn" onclick="openTab(event, 'abubakr-wafat')">वफ़ात</button>
+                </div>
 
-            <p><b>2. परिवार व संतान:</b></p>
-            <ul>
-                <li><b>पिता का नाम:</b> उस्मान अबू क़हाफ़ा</li>
-                <li><b>माता का नाम:</b> सलमा उम्मुल ख़ैर</li>
-                <li><b>संतान:</b> हज़रत आयशा (रज़ि.), हज़रत अस्मा, अब्दुल्लाह, अब्दुर्रहमान, मोहम्मद, उम्मे कुलसूम</li>
-            </ul>
+                <!-- 🔊 वॉइस बटन -->
+                <button class="audio-btn" onclick="speakCurrentTab(this)">🔊 सुनिए</button>
 
-            <p><b>3. ख़िलाफ़त व मुख्य कारनामे:</b></p>
-            <ul>
-                <li><b>ख़िलाफ़त का समय:</b> 632 ईस्वी से 634 ईस्वी (लगभग 2 वर्ष 3 महीने)</li>
-                <li><b>अहम् कार्य:</b> पवित्र कुरआन मजीद की तमाम आयतों को एक जगह एकत्र कर किताबी रूप में सुरक्षित कराया, झूठे नबियों का ख़ात्मा किया और बाग़ियों को शांत किया।</li>
-            </ul>
+                <!-- 1. परिचय टैब -->
+                <!-- 1. परिचय टैब -->
+<div id="abubakr-parichay" class="tab-content active">
+    <p><b>परिचय:</b> हज़रत अबू बक्र सिद्दीक़ (रज़ियल्लाहु अन्हु) इस्लाम के पहले ख़लीफ़ा और पैगंबर हज़रत मोहम्मद (सल्लल्लाहु अलैहि वसल्लम) के सबसे क़रीबी और वफ़ादार साथी (सहाबी) थे। पुरुषों में सबसे पहले इस्लाम क़बूल करने वाले भी वही थे।</p>
+    
+    <p><b>पूरा नाम:</b> अब्दुल्लाह बिन अबी क़ुहाफ़ा (उस्मान)</p>
+    
+    <p><b>पैदाइश:</b> लगभग 573 ईस्वी (मक्का, अरब)</p>
+    
+    <p><b>लक़ब (उपाधि):</b> 'अत़ीक़' (आज़ाद किया गया/पाक) और 'सिद्दीक़' (सच्चा - पैगंबर साहब की बातों की तुरंत तस्दीक़ करने वाले)</p>
+    
+    <p><b>माता-पिता:</b> पिता: उस्मान बिन आमिर (अबू क़ुहाफ़ा), माता: सलमा बिश्र (उम्मुल ख़ैर)</p>
+    
+    <p><b>मुख्य संतान:</b> हज़रत आयशा (रज़ि.), हज़रत अस्मा (रज़ि.), हज़रत अब्दुल रहमान (रज़ि.), हज़रत अब्दुल्लाह (रज़ि.), हज़रत मोहम्मद (रज़ि.), हज़रत उम कुलसूम (रज़ि.)</p>
+</div>
 
-            <p><b>4. वफ़ात:</b></p>
-            <ul>
-                <li><b>इंतक़ाल:</b> 23 जमादिल आख़िर 13 हिजरी (634 ईस्वी), मदीना मुनव्वरा</li>
-                <li><b>आयु:</b> 63 वर्ष</li>
-                <li><b>मज़ार:</b> मस्जिदे नबवी (मदीना) में हज़रत मोहम्मद (सल्ल.) के पहलू में</li>
-            </ul>
-        </div>
+
+                <!-- 2. हदीसें टैब -->
+<div id="abubakr-hadees" class="tab-content">
+    <div class="hadees-box">
+        <p><b>हदीस 1:</b> रसूलुल्लाह (सल्लल्लाहु अलैहि वसल्लम) ने फ़रमाया: "अगर मैं अल्लाह के अलावा किसी और को अपना ख़लील (जिगरी दोस्त) बनाता, तो अबू बक्र को बनाता।"</p>
+        <small><b>हवाला:</b> सहीह बुख़ारी (3656)</small>
     </div>
-</details>
-
-<details>
-    <summary>2. हज़रत उमर फ़ारूक़ (रज़ि.)</summary>
-    <div class="content">
-        <button class="audio-btn" onclick="speakText(this)">🔊 सुनिए</button>
-
-        <div class="text-to-read">
-            <p><b>परिचय:</b> आप इस्लाम के द्वितीय ख़लीफ़ा थे, जो अपने अद्वितीय न्याय, बहादुरी, और शासन व्यवस्था के लिए दुनिया भर में प्रसिद्ध हैं।</p>
-
-            <p><b>1. नाम व पैदाइश:</b></p>
-            <ul>
-                <li><b>पूरा नाम:</b> उमर इब्न अल-ख़त्ताब</li>
-                <li><b>पैदाइश:</b> 584 ईस्वी, मक्का (सऊदी अरब)</li>
-                <li><b>लक़ब (उपाधि):</b> अल-फ़ारूक़ (सत्य और असत्य में फ़र्क करने वाला) और अमीरुल मोमिनीन</li>
-            </ul>
-
-            <p><b>2. परिवार व संतान:</b></p>
-            <ul>
-                <li><b>पिता का नाम:</b> ख़त्ताब इब्न नुफैल</li>
-                <li><b>माता का नाम:</b> हंतमा बित हिशाम</li>
-                <li><b>मुख्य संतान:</b> हज़रत अब्दुल्लाह बिन उमर, हज़रत हफ़्सा (रज़ि.), उबैदुल्लाह, असिम, ज़ैनब, फ़ातिमा</li>
-            </ul>
-
-            <p><b>3. ख़िलाफ़त व मुख्य कारनामे:</b></p>
-            <ul>
-                <li><b>ख़िलाफ़त का समय:</b> 634 ईस्वी से 644 ईस्वी (लगभग 10 वर्ष. 6 महीने)</li>
-                <li><b>अहम् कार्य:</b> हिजरी कैलेंडर (Islamic Calendar) की शुरुआत की, डाक व्यवस्था (Post System), न्याय प्रणाली (Judicial Courts), जेल व्यवस्था, और पुलिस बल की स्थापना की। बैतुल माल (सार्वजनिक ख़ज़ाना) का गठन किया।</li>
-            </ul>
-
-            <p><b>4. शहादत:</b></p>
-            <ul>
-                <li><b>शहादत:</b> 26 ज़ुल हिज्जा 23 हिजरी (644 ईस्वी), फ़ज़र की नमाज़ के दौरान अबू लुलू फ़ीरोज़ ने हमला किया था।</li>
-                <li><b>आयु:</b> 60-63 वर्ष</li>
-                <li><b>मज़ार:</b> मस्जिदे नबवी (मदीना) में हज़रत अबू बक्र (रज़ि.) के पहलू में</li>
-            </ul>
-        </div>
+    
+    <div class="hadees-box">
+        <p><b>हदीस 2:</b> नबी करीम (सल्लल्लाहु अलैहि वसल्लम) ने अपनी बीमारी के दौरान हज़रत अबू बक्र (रज़ि.) को मुसलमानों की नमाज़ का इमाम बनाने का हुक्म दिया था।</p>
+        <small><b>हवाला:</b> सहीह बुख़ारी व सहीह मुस्लिम</small>
     </div>
-</details>
+</div>
+
+
+                <!-- 3. कारनामे टैब -->
+                <div id="abubakr-karname" class="tab-content">
+                    <p><b>ख़िलाफ़त का समय:</b> <!-- यहाँ समय लिखें --></p>
+                    <p><b>1. कारनामा:</b> <!-- विवरण लिखें --></p>
+                    <p><b>2. कारनामा:</b> <!-- विवरण लिखें --></p>
+                </div>
+
+                <!-- 4. वफ़ात टैब -->
+                <div id="abubakr-wafat" class="tab-content">
+                    <p><b>इंतक़ाल:</b> <!-- यहाँ तारीख लिखें --></p>
+                    <p><b>आयु:</b> <!-- यहाँ आयु लिखें --></p>
+                    <p><b>मज़ार:</b> <!-- यहाँ मज़ार लिखें --></p>
+                </div>
+
+            </div>
+        </details>
+        
+        
 
     </div>
+    
+    
+    
 
+    <!-- JavaScript Logic -->
     <script>
-        function speakText(button) {
-            // Button ke paas wale div (.text-to-read) ka text uthana
-            let contentDiv = button.nextElementSibling;
-            let text = contentDiv.innerText;
+        function openTab(evt, tabId) {
+            let container = evt.currentTarget.closest('.content');
+            
+            let tabContents = container.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
 
-            // Pehle se bol rahi aawaz ko rokna
+            let tabBtns = container.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        function speakCurrentTab(button) {
+            let container = button.closest('.content');
+            let activeTab = container.querySelector('.tab-content.active');
+            let text = activeTab.innerText;
+
             window.speechSynthesis.cancel();
 
-            // Nayi speech tayyar karna
             let speech = new SpeechSynthesisUtterance(text);
-            speech.lang = 'hi-IN'; // Hindi aawaz ke liye
-            speech.rate = 0.9;   // Bolne ki speed (thoda aaram se padhne ke liye)
+            speech.lang = 'hi-IN';
+            speech.rate = 0.9;
 
-            // Browser se bolne ko kehna
             window.speechSynthesis.speak(speech);
         }
     </script>
+    <a href="index.html">↗️</a>
 
 </body>
 </html>
