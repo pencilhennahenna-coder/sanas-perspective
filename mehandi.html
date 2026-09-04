@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. SEO Title और Meta Tags (गूगल सर्च में ऊपर लाने के लिए) -->
+    <!-- 1. SEO Title और Meta Tags -->
     <title>Beautiful Mehandi Design Gallery | Apnaapan Hai Tumse - Sana</title>
     <meta name="description" content="Explore simple, back hand, and Mandela mehandi designs collection by Sana. Perfect bridal and festive henna art inspiration.">
     <meta name="keywords" content="mehandi design, back hand mehandi, mandela mehandi, simple mehandi, henna art, apnaapan hai tumse, sana mehandi, short video mehandi">
@@ -36,19 +36,16 @@
             text-align: center;
         }
 
-
-        
-                /* मुख्य बड़ी इमेज दिखाने का एरिया */
+        /* मुख्य बड़ी इमेज दिखाने का एरिया */
         .preview-box img {
             width: 100%;
             height: 280px;
             object-fit: contain;
-            background-color: #ffffff; /* 👈 बस यह लाइन जोड़नी है ताकि खाली जगह सफेद दिखे */
+            background-color: #ffffff; 
             border-radius: 8px;
             border: 2px solid #ff9900;
             transition: 0.3s ease;
         }
-        
 
         .preview-title {
             font-size: 16px;
@@ -78,7 +75,7 @@
         /* 6 छोटी तस्वीरों की ग्रिड (3-3 के जोड़े में) */
         .thumbnails-6 {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* एक लाइन में 3 तस्वीरें */
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             margin-top: 15px;
         }
@@ -91,6 +88,7 @@
             cursor: pointer;
             border: 2px solid #ddd;
             transition: 0.2s;
+            background-color: #ffffff;
         }
 
         .thumbnails-6 img:hover {
@@ -127,22 +125,22 @@
     <!-- मुख्य डिब्बा जिसमें एक बड़ी फोटो, टाइटल और सेव बटन होगा -->
     <div class="mehandi-grid-box">
         
-        <!-- ऊपर फोकस होने वाली मुख्य बड़ी तस्वीर -->
+        <!-- ऊपर फोकस होने वाली मुख्य बड़ी तस्वीर (यहाँ Design art कर दिया गया है) -->
         <div class="preview-box">
-            <img id="activeMehandi" src="images/design art/Mandela design.jpg" alt="Active Mehandi Design">
+            <img id="activeMehandi" src="images/Design art/Mandela design.jpg" alt="Active Mehandi Design">
             <div class="preview-title" id="activeTitle">Mandela Mehandi Masterpiece</div>
         </div>
 
         <!-- सेव/डाउनलोड बटन -->
         <div style="margin: 15px 0;">
-            <a id="saveBtn" href="images/design art/Mandela design.jpg" download class="save-mehandi-btn">
+            <a id="saveBtn" href="images/Design art/Mandela design.jpg" download class="save-mehandi-btn">
                 📥 Save Mehandi Design
             </a>
         </div>
 
         <p style="font-size: 13px; color: #666; margin-top: 15px;">नीचे दी गई डिज़ाइनों में से किसी पर भी क्लिक करें:</p>
 
-        <!-- 6 छोटी तस्वीरों की लिस्ट (Thumbnails) -->
+        <!-- 6 छोटी तस्वीरों की लिस्ट (सभी में Design art का 'D' बड़ा कर दिया है) -->
         <div class="thumbnails-6">
             <img src="images/Design art/Mandela design.jpg" alt="Mandela Design" onclick="showBigImage(this, 'Mandela Mehandi Masterpiece')">
             
@@ -157,7 +155,6 @@
             <img src="images/Design art/mehndi design.jpg" alt="Design 6" onclick="showBigImage(this, 'Bridal Special Mehandi')">
         </div>
 
-
     </div>
 
     <!-- होम पेज पर लौटने का बटन -->
@@ -165,18 +162,15 @@
         <a href="index.html">← Go Back to Sana.mall Home</a>
     </div>
 
-    <!-- जावास्क्रिप्ट जो क्लिक करते ही फोटो बड़ा और सेव लिंक बदल देगी -->
+    <!-- जावास्क्रिप्ट -->
     <script>
         function showBigImage(element, titleText) {
             var bigImg = document.getElementById("activeMehandi");
             var titleBox = document.getElementById("activeTitle");
             var saveButton = document.getElementById("saveBtn");
             
-            // क्लिक की गई छोटी फोटो का सोर्स ऊपर बड़े वाले डिब्बे में आ जाएगा
             bigImg.src = element.src;
             titleBox.innerText = titleText;
-            
-            // सेव बटन का लिंक भी उसी फोटो के हिसाब से बदल जाएगा
             saveButton.href = element.src;
         }
     </script>
