@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1. SEO Title और Meta Tags (गूगल सर्च में ऊपर लाने के लिए) -->
+    <title>Beautiful Mehandi Design Gallery | Apnaapan Hai Tumse - Sana</title>
+    <meta name="description" content="Explore simple, back hand, and Mandela mehandi designs collection by Sana. Perfect bridal and festive henna art inspiration.">
+    <meta name="keywords" content="mehandi design, back hand mehandi, mandela mehandi, simple mehandi, henna art, apnaapan hai tumse, sana mehandi, short video mehandi">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .mehandi-header {
+            background-color: #232f3e;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* मुख्य गैलरी डिब्बा */
+        .mehandi-grid-box {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+              /* मुख्य बड़ी इमेज दिखाने का एरिया */
+        .preview-box img {
+            width: 100%;
+            height: 280px; /* ऊँचाई थोड़ी और बढ़ाई ताकि फोटो बड़ी और साफ़ दिखे */
+            object-fit: contain; /* 👈 यहाँ हमने 'cover' की जगह 'contain' कर दिया, अब फोटो बिल्कुल नहीं कटेगी */
+            background-color: #fff; /* अगर फोटो के साइड में जगह बचेगी तो डिज़ाइन के पीछे सफेद रंग का बढ़िया बैकग्राउंड रहेगा */
+            border-radius: 8px;
+            border: 2px solid #ff9900;
+            transition: 0.3s ease;
+        }
+        
+        
+
+        .preview-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        /* सेव/डाउनलोड बटन का डिज़ाइन */
+        .save-mehandi-btn {
+            display: inline-block;
+            background-color: #232f3e;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: 0.2s;
+        }
+
+        .save-mehandi-btn:hover {
+            background-color: #ff9900;
+        }
+
+        /* 6 छोटी तस्वीरों की ग्रिड (3-3 के जोड़े में) */
+        .thumbnails-6 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* एक लाइन में 3 तस्वीरें */
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .thumbnails-6 img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            transition: 0.2s;
+        }
+
+        .thumbnails-6 img:hover {
+            border-color: #ff9900;
+            transform: scale(1.05);
+        }
+
+        .back-home {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .back-home a {
+            display: inline-block;
+            background-color: #ff9900;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ऊपर का हेडर -->
+    <div class="mehandi-header">
+        <span style="font-size: 18px; font-weight: bold;">🎨 Apnaapan Hai Tumse</span>
+        <a href="index.html" style="color: white; text-decoration: none; font-size: 14px;">🏠 Home</a>
+    </div>
+
+    <h2 style="text-align: center; color: #232f3e; margin-top: 20px;">Sana's Mehandi Collection</h2>
+
+    <!-- मुख्य डिब्बा जिसमें एक बड़ी फोटो, टाइटल और सेव बटन होगा -->
+    <div class="mehandi-grid-box">
+        
+        <!-- ऊपर फोकस होने वाली मुख्य बड़ी तस्वीर -->
+        <div class="preview-box">
+            <img id="activeMehandi" src="images/mahndi/Mandela design.jpg" alt="Active Mehandi Design">
+            <div class="preview-title" id="activeTitle">Mandela Mehandi Masterpiece</div>
+        </div>
+
+        <!-- सेव/डाउनलोड बटन -->
+        <div style="margin: 15px 0;">
+            <a id="saveBtn" href="images/mahndi/Mandela design.jpg" download class="save-mehandi-btn">
+                📥 Save Mehandi Design
+            </a>
+        </div>
+
+        <p style="font-size: 13px; color: #666; margin-top: 15px;">नीचे दी गई डिज़ाइनों में से किसी पर भी क्लिक करें:</p>
+
+        <!-- 6 छोटी तस्वीरों की लिस्ट (Thumbnails) -->
+        <div class="thumbnails-6">
+            <img src="images/mahndi/Mandela design.jpg" alt="Mandela Design" onclick="showBigImage(this, 'Mandela Mehandi Masterpiece')">
+            
+            <img src="images/mahndi/back hand mehndi design.jpg" alt="Back Hand Design" onclick="showBigImage(this, 'Back Hand Special Design')">
+            
+            <img src="images/mahndi/simple mahandi design.jpg" alt="Simple Design" onclick="showBigImage(this, 'Simple & Easy Mehandi Art')">
+            
+            <img src="images/mahndi/back hand mehndi.png" alt="Henna Art" onclick="showBigImage(this, 'Classic Henna Design')">
+            
+            <img src="images/mahndi/simple-mehndi-1.png" alt="Design 5" onclick="showBigImage(this, 'Traditional Mehandi Art')">
+            
+            <img src="images/mahndi/mehndi design.jpg" alt="Design 6" onclick="showBigImage(this, 'Bridal Special Mehandi')">
+        </div>
+
+
+
+    </div>
+
+    <!-- होम पेज पर लौटने का बटन -->
+    <div class="back-home">
+        <a href="index.html">← Go Back to Sana.mall Home</a>
+    </div>
+
+    <!-- जावास्क्रिप्ट जो क्लिक करते ही फोटो बड़ा और सेव लिंक बदल देगी -->
+    <script>
+        function showBigImage(element, titleText) {
+            var bigImg = document.getElementById("activeMehandi");
+            var titleBox = document.getElementById("activeTitle");
+            var saveButton = document.getElementById("saveBtn");
+            
+            // क्लिक की गई छोटी फोटो का सोर्स ऊपर बड़े वाले डिब्बे में आ जाएगा
+            bigImg.src = element.src;
+            titleBox.innerText = titleText;
+            
+            // सेव बटन का लिंक भी उसी फोटो के हिसाब से बदल जाएगा
+            saveButton.href = element.src;
+        }
+    </script>
+    
+</body>
+</html>

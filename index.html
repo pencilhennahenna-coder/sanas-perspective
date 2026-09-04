@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="zFnq8cLLNpEBhuHt25BPfxLHZb8_2Re8iQHThepnag4" />
     <style>
         body { 
-            background: #ccfff8; 
+            background: gold; 
             font-family: sans-serif; 
             text-align: center; 
             padding: 15px; 
@@ -15,6 +15,7 @@
         }
 
         .main-box { 
+        background: #ffffff3f; 
             width: 100%; 
             max-width: 380px; 
             margin: 0 auto; 
@@ -24,7 +25,8 @@
         }
 
         h1 { 
-            color: #d81b60; 
+            color: #fff; 
+            text-shadow:2px 2px 2px blue;
             text-transform: uppercase; 
             margin: 15px 0 5px 0; 
             width: 100%;                  
@@ -32,21 +34,27 @@
 
         .tagline { 
             font-style: italic; 
-            color: #ff7300; 
+            text-shadow:2px 2px 2px white;
+            color: #000; 
             font-weight: bold; 
             margin-bottom: 20px; 
-            width: 100%;                  
+             width: 100%;   
+             <!-- agar Main box per Ham display flex lagate Hain to heading of paragraph mein (with )lagana padega -->    
         }
 
         .section-title {
             width: 100%;
-            color: #d81b60;
-            font-size: 16px;
+            text-shadow:2px 2px 2px white;
+            color: #981b60;
+            font-size: 20px;
             font-weight: bold;
-            margin: 15px 0 10px 0;
-            border-bottom: 2px dashed #d81b60;
-            padding-bottom: 4px;
+            margin: 35px ;
+            border-bottom: 2px dashed #000;
+            padding-bottom: 9px;
         }
+
+
+
 
         .base-btn {
             display: flex; 
@@ -59,12 +67,26 @@
             font-weight: bold; 
             font-size: 13px;              
             width: 48%;                   /* Exact 2 buttons per line */
-            box-sizing: border-box;       
+                 box-sizing: border-box;  
             box-shadow: 0px 4px 0px rgba(0,0,0,0.2);
             margin-bottom: 12px;
             text-align: center;
             padding: 4px;
-        }
+            
+            transition: all 0.2s ease; 
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2); /* नॉर्मल हालत में परछाई */
+}
+
+.base-btn:hover {
+    transform: translateY(3px);                  /* बटन 3px नीचे दबेगा */
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);  /* परछाई दबकर 1px रह जाएगी */
+}
+            
+            
+            
+            
+       
+        
 
         /* Full Width Button */
         .full-btn {
@@ -113,9 +135,22 @@
         <a href="kanoon.html" class="base-btn btn-kanoon">⚖️ Kanoon</a>
         
         <a href="kidspoem.html" class="base-btn btn-poem">📚 Poem Library</a>
-        <a href="english.html" class="base-btn btn-english">📚 English Learning</a>
+       
+        <a href="english.html" class="base-btn btn-english">📚 English 
+        Learning</a>
+        
+        
+          <a href="mehandi.html" style="background-color: blue; padding :20px 20px; color:white; border-radius:12px; text-decoration:none; box-shadow: 2px 2px white;">💅mehandi imege 
+        </a>
+        
 
-        <div class="section-title">▶️ My YouTube Channels</div>
+        <div class="section-title">▶️ My 
+        YouTube Channels</div>
+        
+        
+        <!-- index.html mein yeh code likhein -->
+
+        
 
         <a href="https://www.youtube.com/@SanasPerspective" target="_blank" class="base-btn btn-yt">🎥 Sana's Perspective</a>
         <a href="https://www.youtube.com/@Apnapan-x4j" target="_blank" class="base-btn btn-yt">💅 Apnapan Hai Tumse</a>
